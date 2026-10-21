@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8de8c"/>
+      <stop offset="1" stop-color="#e7b220"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="64" height="64" rx="15" fill="url(#g)"/>
+  <text x="32" y="41" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700"
+        fill="#1a1400" text-anchor="middle" letter-spacing="0.5">KPL</text>
+</svg>
