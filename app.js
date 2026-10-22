@@ -5,6 +5,7 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
+  var BUILD = '2026-10-22 19:20';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
   var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2' };
 
@@ -657,8 +658,10 @@
       var have = d ? d.games.length : 0;
       var isPast = ev.date < L.nowKey();      // 往日的比赛一定已经打完了
       var pending = all.length > done.length; // 还有没打完的局
+      // 已有数据可能是「半成品」（某局还没写胜方），这种不能算最新，必须重拉
+      var broken = L.seriesIncomplete(d);
 
-      if (done.length <= have) {
+      if (done.length <= have && !broken) {
         // 局数没变。但如果这是往日的比赛、又没在打的局，说明快照卡在 live 上了，直接收尾
         if (d && isPast && !pending && d.live) {
           L.closeSeries(d);
@@ -681,9 +684,10 @@
       for (var i = 0; i < done.length; i++) {
         var one = await apiJSON('/battle/open?battle_id=' + done[i].battle_id);
         var g = L.normalizeBattle(one.data);
-        if (g) games.push(g);
+        // 局刚打完时官方数据可能还没写全（没有胜方），这种先不要，下一轮再拉
+        if (g && g.winner) games.push(g);
       }
-      if (!games.length) throw new Error('没有解析到局数据');
+      if (!games.length) throw new Error('没有解析到完整的局数据');
 
       var nd = {
         matchId: matchId,
@@ -818,7 +822,8 @@
           '<li><b>微信内</b>：先点右上角「…」→ 在浏览器打开，再下载</li>' +
           '<li><b>电脑</b>：双击 .ics 导入 Outlook / 系统日历；也可用 Google 日历「导入」</li>' +
         '</ol>' +
-      '</div>';
+      '</div>' +
+      '<p class="build">版本 ' + BUILD + '</p>';
 
     $('#sheet-mask').classList.add('open');
     $('#sheet-panel').classList.add('open');

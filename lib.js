@@ -581,6 +581,25 @@
     return list.length ? list[0] : null;
   }
 
+  /**
+   * 这份战报是不是「半成品」：
+   * 有局没有胜方，或者比分加起来跟局数对不上。
+   * 出现在「局刚打完、官方数据还没写全」的时候，必须重新拉，不能当成最新。
+   */
+  function seriesIncomplete(detail) {
+    if (!detail) return false;
+    var games = detail.games || [];
+    for (var i = 0; i < games.length; i++) {
+      if (!gameWinner(games[i])) return true;
+    }
+    var sum = 0;
+    var score = detail.score || {};
+    for (var k in score) {
+      if (Object.prototype.hasOwnProperty.call(score, k)) sum += Number(score[k]) || 0;
+    }
+    return sum !== games.length;
+  }
+
   var api = {
     TZ: TZ,
     dayKey: dayKey,
@@ -610,6 +629,7 @@
     gameWinner: gameWinner,
     recomputeSeries: recomputeSeries,
     closeSeries: closeSeries,
+    seriesIncomplete: seriesIncomplete,
     normalizeBattle: normalizeBattle,
     matchKey: matchKey,
     nextRefreshTarget: nextRefreshTarget,
