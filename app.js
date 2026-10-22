@@ -5,7 +5,7 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
-  var BUILD = '2026-10-22 19:20';   // 出问题时先看这个，能确定手机上跑的是哪一版
+  var BUILD = '2026-10-23 05:35';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
   var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2' };
 
