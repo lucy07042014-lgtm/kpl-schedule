@@ -1,0 +1,12 @@
+{
+  "updatedAt": "2026-10-23T06:48:58+08:00",
+  "note": "新闻转载里抽出来的候选对阵，未经官方核实；update.py --with-news 才会合并",
+  "articles": [
+    {
+      "title": "https://wap.zhibo8.com/news/web/other/2026-10-22/6ada0b3c02967native.htm",
+      "url": "https://wap.zhibo8.com/news/web/other/2026-10-22/6ada0b3c02967native.htm",
+      "matches": 4
+    }
+  ],
+  "matches": []
+}
