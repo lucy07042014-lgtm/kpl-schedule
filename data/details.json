@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-21T19:32:24+08:00",
+ "updatedAt": "2026-10-22T05:54:16+08:00",
  "source": "王者荣耀赛事数据平台（官方）",
  "matches": {
   "2026-10-18|KSG|上海EDG.M": {
@@ -4935,12 +4935,12 @@
     "成都AG超玩会": "https://smhtv-pic.tga.qq.com/02e0582db3b0766ad6fab97e95743e6c.png"
    },
    "score": {
-    "成都AG超玩会": 1,
-    "长沙TES.A": 1
+    "成都AG超玩会": 2,
+    "长沙TES.A": 4
    },
-   "winner": "",
-   "finished": false,
-   "live": true,
+   "winner": "长沙TES.A",
+   "finished": true,
+   "live": false,
    "games": [
     {
      "seq": 1,
@@ -5001,86 +5001,6 @@
        "spell": "惩击"
       },
       {
-       "camp": 1,
-       "name": "长沙TES.A无幻",
-       "team": "长沙TES.A",
-       "hero": "关羽",
-       "heroId": 140,
-       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/140.jpg",
-       "kills": 0,
-       "deaths": 2,
-       "assists": 7,
-       "kda": 3.5,
-       "gold": 10523,
-       "damage": 308956,
-       "damageRate": 0.2048,
-       "partRate": 87.5,
-       "mvp": false,
-       "svp": false,
-       "score": 6.2,
-       "spell": "疾跑"
-      },
-      {
-       "camp": 2,
-       "name": "成都AG.一诺",
-       "team": "成都AG超玩会",
-       "hero": "戈娅",
-       "heroId": 548,
-       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/548.jpg",
-       "kills": 3,
-       "deaths": 2,
-       "assists": 7,
-       "kda": 5,
-       "gold": 13344,
-       "damage": 683316,
-       "damageRate": 0.3336,
-       "partRate": 90.9,
-       "mvp": false,
-       "svp": false,
-       "score": 7.9,
-       "spell": "闪现"
-      },
-      {
-       "camp": 1,
-       "name": "长沙TES.A七",
-       "team": "长沙TES.A",
-       "hero": "弈星",
-       "heroId": 197,
-       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/197.jpg",
-       "kills": 4,
-       "deaths": 2,
-       "assists": 4,
-       "kda": 4,
-       "gold": 9547,
-       "damage": 245638,
-       "damageRate": 0.1628,
-       "partRate": 100.0,
-       "mvp": false,
-       "svp": false,
-       "score": 7.5,
-       "spell": "闪现"
-      },
-      {
-       "camp": 2,
-       "name": "成都AG.长生",
-       "team": "成都AG超玩会",
-       "hero": "小乔",
-       "heroId": 106,
-       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/106.jpg",
-       "kills": 2,
-       "deaths": 1,
-       "assists": 7,
-       "kda": 9,
-       "gold": 10179,
-       "damage": 331419,
-       "damageRate": 0.1618,
-       "partRate": 81.8,
-       "mvp": false,
-       "svp": false,
-       "score": 9.3,
-       "spell": "闪现"
-      },
-      {
        "camp": 2,
        "name": "成都AG.大帅",
        "team": "成都AG超玩会",
@@ -5122,22 +5042,22 @@
       },
       {
        "camp": 1,
-       "name": "长沙TES.A蓝桉",
+       "name": "长沙TES.A七",
        "team": "长沙TES.A",
-       "hero": "艾琳",
-       "heroId": 155,
-       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/155.jpg",
-       "kills": 1,
+       "hero": "弈星",
+       "heroId": 197,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/197.jpg",
+       "kills": 4,
        "deaths": 2,
-       "assists": 6,
-       "kda": 3.5,
-       "gold": 11655,
-       "damage": 592834,
-       "damageRate": 0.393,
-       "partRate": 87.5,
+       "assists": 4,
+       "kda": 4,
+       "gold": 9547,
+       "damage": 245638,
+       "damageRate": 0.1628,
+       "partRate": 100.0,
        "mvp": false,
-       "svp": true,
-       "score": 7.9,
+       "svp": false,
+       "score": 7.5,
        "spell": "闪现"
       },
       {
@@ -5162,6 +5082,66 @@
       },
       {
        "camp": 1,
+       "name": "长沙TES.A蓝桉",
+       "team": "长沙TES.A",
+       "hero": "艾琳",
+       "heroId": 155,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/155.jpg",
+       "kills": 1,
+       "deaths": 2,
+       "assists": 6,
+       "kda": 3.5,
+       "gold": 11655,
+       "damage": 592834,
+       "damageRate": 0.393,
+       "partRate": 87.5,
+       "mvp": false,
+       "svp": true,
+       "score": 7.9,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.长生",
+       "team": "成都AG超玩会",
+       "hero": "小乔",
+       "heroId": 106,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/106.jpg",
+       "kills": 2,
+       "deaths": 1,
+       "assists": 7,
+       "kda": 9,
+       "gold": 10179,
+       "damage": 331419,
+       "damageRate": 0.1618,
+       "partRate": 81.8,
+       "mvp": false,
+       "svp": false,
+       "score": 9.3,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "长沙TES.A无幻",
+       "team": "长沙TES.A",
+       "hero": "关羽",
+       "heroId": 140,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/140.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 7,
+       "kda": 3.5,
+       "gold": 10523,
+       "damage": 308956,
+       "damageRate": 0.2048,
+       "partRate": 87.5,
+       "mvp": false,
+       "svp": false,
+       "score": 6.2,
+       "spell": "疾跑"
+      },
+      {
+       "camp": 1,
        "name": "长沙TES.A帆帆",
        "team": "长沙TES.A",
        "hero": "盾山",
@@ -5179,6 +5159,26 @@
        "svp": false,
        "score": 6.4,
        "spell": "雾行千山"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.一诺",
+       "team": "成都AG超玩会",
+       "hero": "戈娅",
+       "heroId": 548,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/548.jpg",
+       "kills": 3,
+       "deaths": 2,
+       "assists": 7,
+       "kda": 5,
+       "gold": 13344,
+       "damage": 683316,
+       "damageRate": 0.3336,
+       "partRate": 90.9,
+       "mvp": false,
+       "svp": false,
+       "score": 7.9,
+       "spell": "闪现"
       }
      ],
      "bans": [
@@ -5366,23 +5366,23 @@
       },
       {
        "camp": 1,
-       "name": "成都AG.钟意",
+       "name": "成都AG.一诺",
        "team": "成都AG超玩会",
-       "hero": "杨戬",
-       "heroId": 178,
-       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/178.jpg",
-       "kills": 2,
-       "deaths": 2,
-       "assists": 4,
+       "hero": "后羿",
+       "heroId": 169,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/169.jpg",
+       "kills": 4,
+       "deaths": 3,
+       "assists": 5,
        "kda": 3,
-       "gold": 14445,
-       "damage": 694847,
-       "damageRate": 0.2986,
-       "partRate": 60.0,
+       "gold": 14634,
+       "damage": 525029,
+       "damageRate": 0.2256,
+       "partRate": 90.0,
        "mvp": false,
        "svp": false,
-       "score": 8.1,
-       "spell": "惩击"
+       "score": 8.3,
+       "spell": "闪现"
       },
       {
        "camp": 2,
@@ -5403,46 +5403,6 @@
        "svp": false,
        "score": 6.8,
        "spell": "闪现"
-      },
-      {
-       "camp": 2,
-       "name": "长沙TES.A无幻",
-       "team": "长沙TES.A",
-       "hero": "夏洛特",
-       "heroId": 536,
-       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg",
-       "kills": 4,
-       "deaths": 2,
-       "assists": 1,
-       "kda": 2.5,
-       "gold": 16367,
-       "damage": 722266,
-       "damageRate": 0.3,
-       "partRate": 50.0,
-       "mvp": true,
-       "svp": false,
-       "score": 9.2,
-       "spell": "闪现"
-      },
-      {
-       "camp": 2,
-       "name": "长沙TES.A帆帆",
-       "team": "长沙TES.A",
-       "hero": "元流之子(辅助)",
-       "heroId": 585,
-       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/585.jpg",
-       "kills": 0,
-       "deaths": 1,
-       "assists": 4,
-       "kda": 4,
-       "gold": 10226,
-       "damage": 156269,
-       "damageRate": 0.0649,
-       "partRate": 40.0,
-       "mvp": false,
-       "svp": false,
-       "score": 5.7,
-       "spell": "净化"
       },
       {
        "camp": 1,
@@ -5466,26 +5426,6 @@
       },
       {
        "camp": 1,
-       "name": "成都AG.一诺",
-       "team": "成都AG超玩会",
-       "hero": "后羿",
-       "heroId": 169,
-       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/169.jpg",
-       "kills": 4,
-       "deaths": 3,
-       "assists": 5,
-       "kda": 3,
-       "gold": 14634,
-       "damage": 525029,
-       "damageRate": 0.2256,
-       "partRate": 90.0,
-       "mvp": false,
-       "svp": false,
-       "score": 8.3,
-       "spell": "闪现"
-      },
-      {
-       "camp": 1,
        "name": "成都AG.轩染",
        "team": "成都AG超玩会",
        "hero": "马超",
@@ -5503,6 +5443,66 @@
        "svp": false,
        "score": 7.2,
        "spell": "疾跑"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A帆帆",
+       "team": "长沙TES.A",
+       "hero": "元流之子(辅助)",
+       "heroId": 585,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/585.jpg",
+       "kills": 0,
+       "deaths": 1,
+       "assists": 4,
+       "kda": 4,
+       "gold": 10226,
+       "damage": 156269,
+       "damageRate": 0.0649,
+       "partRate": 40.0,
+       "mvp": false,
+       "svp": false,
+       "score": 5.7,
+       "spell": "净化"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A无幻",
+       "team": "长沙TES.A",
+       "hero": "夏洛特",
+       "heroId": 536,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg",
+       "kills": 4,
+       "deaths": 2,
+       "assists": 1,
+       "kda": 2.5,
+       "gold": 16367,
+       "damage": 722266,
+       "damageRate": 0.3,
+       "partRate": 50.0,
+       "mvp": true,
+       "svp": false,
+       "score": 9.2,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "成都AG.钟意",
+       "team": "成都AG超玩会",
+       "hero": "杨戬",
+       "heroId": 178,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/178.jpg",
+       "kills": 2,
+       "deaths": 2,
+       "assists": 4,
+       "kda": 3,
+       "gold": 14445,
+       "damage": 694847,
+       "damageRate": 0.2986,
+       "partRate": 60.0,
+       "mvp": false,
+       "svp": false,
+       "score": 8.1,
+       "spell": "惩击"
       },
       {
        "camp": 2,
@@ -5627,6 +5627,1382 @@
        "camp": 2,
        "hero": "夏洛特",
        "icon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg"
+      }
+     ]
+    },
+    {
+     "seq": 3,
+     "winCamp": 1,
+     "winner": "长沙TES.A",
+     "duration": 1345,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "长沙TES.A",
+       "icon": "https://smhtv-pic.tga.qq.com/48f18204fa257197ec49bb6345d14a33.png",
+       "isWin": true,
+       "kills": 6,
+       "deaths": 4,
+       "assists": 16,
+       "gold": 69967,
+       "towers": 7,
+       "bigDragons": 1,
+       "darkTyrants": 1,
+       "tyrants": 2,
+       "kda": 5.5
+      },
+      {
+       "camp": 2,
+       "name": "成都AG超玩会",
+       "icon": "https://smhtv-pic.tga.qq.com/02e0582db3b0766ad6fab97e95743e6c.png",
+       "isWin": false,
+       "kills": 4,
+       "deaths": 6,
+       "assists": 11,
+       "gold": 64642,
+       "towers": 2,
+       "bigDragons": 1,
+       "darkTyrants": 2,
+       "tyrants": 0,
+       "kda": 2.5
+      }
+     ],
+     "players": [
+      {
+       "camp": 2,
+       "name": "成都AG.一诺",
+       "team": "成都AG超玩会",
+       "hero": "莱西奥",
+       "heroId": 545,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/545.jpg",
+       "kills": 0,
+       "deaths": 1,
+       "assists": 4,
+       "kda": 4,
+       "gold": 14492,
+       "damage": 908916,
+       "damageRate": 0.3178,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6.1,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.长生",
+       "team": "成都AG超玩会",
+       "hero": "女娲",
+       "heroId": 179,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/179.jpg",
+       "kills": 2,
+       "deaths": 0,
+       "assists": 1,
+       "kda": 3,
+       "gold": 12067,
+       "damage": 389161,
+       "damageRate": 0.1361,
+       "partRate": 75.0,
+       "mvp": false,
+       "svp": true,
+       "score": 7.1,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "长沙TES.A书源",
+       "team": "长沙TES.A",
+       "hero": "云缨",
+       "heroId": 538,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/538.jpg",
+       "kills": 2,
+       "deaths": 0,
+       "assists": 2,
+       "kda": 4,
+       "gold": 14106,
+       "damage": 768020,
+       "damageRate": 0.2878,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 7.1,
+       "spell": "惩击"
+      },
+      {
+       "camp": 1,
+       "name": "长沙TES.A蓝桉",
+       "team": "长沙TES.A",
+       "hero": "公孙离",
+       "heroId": 199,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/199.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 2,
+       "kda": 3,
+       "gold": 16047,
+       "damage": 813998,
+       "damageRate": 0.305,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 7.2,
+       "spell": "狂暴"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.钟意",
+       "team": "成都AG超玩会",
+       "hero": "裴擒虎",
+       "heroId": 502,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/502.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 1,
+       "kda": 2,
+       "gold": 15737,
+       "damage": 970704,
+       "damageRate": 0.3394,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6.6,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.大帅",
+       "team": "成都AG超玩会",
+       "hero": "苏烈",
+       "heroId": 194,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/194.jpg",
+       "kills": 0,
+       "deaths": 3,
+       "assists": 4,
+       "kda": 1.3,
+       "gold": 9378,
+       "damage": 56554,
+       "damageRate": 0.0198,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.7,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "长沙TES.A七",
+       "team": "长沙TES.A",
+       "hero": "海月",
+       "heroId": 521,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 4,
+       "kda": 5,
+       "gold": 11761,
+       "damage": 364223,
+       "damageRate": 0.1365,
+       "partRate": 83.3,
+       "mvp": false,
+       "svp": false,
+       "score": 6.4,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "长沙TES.A无幻",
+       "team": "长沙TES.A",
+       "hero": "曹操",
+       "heroId": 128,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg",
+       "kills": 2,
+       "deaths": 1,
+       "assists": 2,
+       "kda": 4,
+       "gold": 16174,
+       "damage": 656349,
+       "damageRate": 0.2459,
+       "partRate": 66.7,
+       "mvp": true,
+       "svp": false,
+       "score": 8.8,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.轩染",
+       "team": "成都AG超玩会",
+       "hero": "夏洛特",
+       "heroId": 536,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 1,
+       "kda": 2,
+       "gold": 12968,
+       "damage": 534693,
+       "damageRate": 0.187,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 5.5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "长沙TES.A帆帆",
+       "team": "长沙TES.A",
+       "hero": "少司缘",
+       "heroId": 577,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/577.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 6,
+       "kda": 3,
+       "gold": 11879,
+       "damage": 66314,
+       "damageRate": 0.0248,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6.6,
+       "spell": "雾行千山"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "盾山",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "张飞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "赵云",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "镜",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/531.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "夏侯惇",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/126.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "暃",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/542.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "铠",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/193.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "杨戬",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/178.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "阿古朵",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/533.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "海月",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "苏烈",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/194.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "夏洛特",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "少司缘",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/577.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "曹操",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "女娲",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/179.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "裴擒虎",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/502.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "云缨",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/538.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "公孙离",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/199.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "莱西奥",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/545.jpg"
+      }
+     ]
+    },
+    {
+     "seq": 4,
+     "winCamp": 1,
+     "winner": "成都AG超玩会",
+     "duration": 842,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "成都AG超玩会",
+       "icon": "https://smhtv-pic.tga.qq.com/02e0582db3b0766ad6fab97e95743e6c.png",
+       "isWin": true,
+       "kills": 9,
+       "deaths": 6,
+       "assists": 24,
+       "gold": 47426,
+       "towers": 6,
+       "bigDragons": 1,
+       "darkTyrants": 1,
+       "tyrants": 1,
+       "kda": 5.5
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A",
+       "icon": "https://smhtv-pic.tga.qq.com/48f18204fa257197ec49bb6345d14a33.png",
+       "isWin": false,
+       "kills": 6,
+       "deaths": 9,
+       "assists": 15,
+       "gold": 41083,
+       "towers": 0,
+       "bigDragons": 0,
+       "darkTyrants": 0,
+       "tyrants": 1,
+       "kda": 2.3333
+      }
+     ],
+     "players": [
+      {
+       "camp": 1,
+       "name": "成都AG.钟意",
+       "team": "成都AG超玩会",
+       "hero": "赵云",
+       "heroId": 107,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg",
+       "kills": 4,
+       "deaths": 0,
+       "assists": 5,
+       "kda": 9,
+       "gold": 11736,
+       "damage": 663141,
+       "damageRate": 0.3849,
+       "partRate": 100.0,
+       "mvp": true,
+       "svp": false,
+       "score": 9.4,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A帆帆",
+       "team": "长沙TES.A",
+       "hero": "苏烈",
+       "heroId": 194,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/194.jpg",
+       "kills": 0,
+       "deaths": 3,
+       "assists": 2,
+       "kda": 0.7,
+       "gold": 5656,
+       "damage": 32840,
+       "damageRate": 0.0283,
+       "partRate": 33.3,
+       "mvp": false,
+       "svp": false,
+       "score": 3.2,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "成都AG.轩染",
+       "team": "成都AG超玩会",
+       "hero": "关羽",
+       "heroId": 140,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/140.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 4,
+       "kda": 5,
+       "gold": 9563,
+       "damage": 264672,
+       "damageRate": 0.1536,
+       "partRate": 55.6,
+       "mvp": false,
+       "svp": false,
+       "score": 6.9,
+       "spell": "疾跑"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A蓝桉",
+       "team": "长沙TES.A",
+       "hero": "百里守约",
+       "heroId": 196,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/196.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 5,
+       "kda": 6,
+       "gold": 10365,
+       "damage": 357936,
+       "damageRate": 0.3081,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6.3,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "成都AG.一诺",
+       "team": "成都AG超玩会",
+       "hero": "敖隐",
+       "heroId": 519,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg",
+       "kills": 3,
+       "deaths": 1,
+       "assists": 3,
+       "kda": 6,
+       "gold": 10400,
+       "damage": 471375,
+       "damageRate": 0.2736,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 7.3,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "成都AG.长生",
+       "team": "成都AG超玩会",
+       "hero": "海月",
+       "heroId": 521,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg",
+       "kills": 1,
+       "deaths": 2,
+       "assists": 5,
+       "kda": 3,
+       "gold": 8670,
+       "damage": 235525,
+       "damageRate": 0.1367,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 6.2,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A无幻",
+       "team": "长沙TES.A",
+       "hero": "项羽",
+       "heroId": 135,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/135.jpg",
+       "kills": 0,
+       "deaths": 3,
+       "assists": 3,
+       "kda": 1,
+       "gold": 6985,
+       "damage": 131161,
+       "damageRate": 0.1129,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "成都AG.大帅",
+       "team": "成都AG超玩会",
+       "hero": "牛魔",
+       "heroId": 168,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/168.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 7,
+       "kda": 3.5,
+       "gold": 7057,
+       "damage": 88014,
+       "damageRate": 0.0511,
+       "partRate": 77.8,
+       "mvp": false,
+       "svp": false,
+       "score": 6.1,
+       "spell": "雾行千山"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A七",
+       "team": "长沙TES.A",
+       "hero": "王维",
+       "heroId": 138,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/138.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 3,
+       "kda": 4,
+       "gold": 7990,
+       "damage": 193598,
+       "damageRate": 0.1666,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 4.5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A书源",
+       "team": "长沙TES.A",
+       "hero": "阿古朵",
+       "heroId": 533,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/533.jpg",
+       "kills": 4,
+       "deaths": 1,
+       "assists": 2,
+       "kda": 6,
+       "gold": 10087,
+       "damage": 446347,
+       "damageRate": 0.3842,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": true,
+       "score": 7.5,
+       "spell": "惩击"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "盾山",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "镜",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/531.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "张飞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "少司缘",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/577.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "裴擒虎",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/502.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "太乙真人",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/186.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "刘备",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/170.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "墨子",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/108.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "马超",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/518.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "赵云",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "百里守约",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/196.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "苏烈",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/194.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "关羽",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/140.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "海月",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "项羽",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/135.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "王维",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/138.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "敖隐",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "牛魔",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/168.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "阿古朵",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/533.jpg"
+      }
+     ]
+    },
+    {
+     "seq": 5,
+     "winCamp": 1,
+     "winner": "长沙TES.A",
+     "duration": 1069,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "长沙TES.A",
+       "icon": "https://smhtv-pic.tga.qq.com/48f18204fa257197ec49bb6345d14a33.png",
+       "isWin": true,
+       "kills": 10,
+       "deaths": 9,
+       "assists": 30,
+       "gold": 61166,
+       "towers": 8,
+       "bigDragons": 1,
+       "darkTyrants": 1,
+       "tyrants": 0,
+       "kda": 4.4444
+      },
+      {
+       "camp": 2,
+       "name": "成都AG超玩会",
+       "icon": "https://smhtv-pic.tga.qq.com/02e0582db3b0766ad6fab97e95743e6c.png",
+       "isWin": false,
+       "kills": 9,
+       "deaths": 10,
+       "assists": 25,
+       "gold": 58533,
+       "towers": 6,
+       "bigDragons": 1,
+       "darkTyrants": 1,
+       "tyrants": 2,
+       "kda": 3.4
+      }
+     ],
+     "players": [
+      {
+       "camp": 1,
+       "name": "长沙TES.A书源",
+       "team": "长沙TES.A",
+       "hero": "镜",
+       "heroId": 531,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/531.jpg",
+       "kills": 2,
+       "deaths": 2,
+       "assists": 6,
+       "kda": 4,
+       "gold": 14721,
+       "damage": 789184,
+       "damageRate": 0.369,
+       "partRate": 80.0,
+       "mvp": false,
+       "svp": false,
+       "score": 8.1,
+       "spell": "惩击"
+      },
+      {
+       "camp": 1,
+       "name": "长沙TES.A七",
+       "team": "长沙TES.A",
+       "hero": "沈梦溪",
+       "heroId": 312,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg",
+       "kills": 2,
+       "deaths": 2,
+       "assists": 7,
+       "kda": 4.5,
+       "gold": 11782,
+       "damage": 370867,
+       "damageRate": 0.1734,
+       "partRate": 90.0,
+       "mvp": true,
+       "svp": false,
+       "score": 8.8,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "长沙TES.A帆帆",
+       "team": "长沙TES.A",
+       "hero": "廉颇",
+       "heroId": 105,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/105.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 7,
+       "kda": 8,
+       "gold": 9324,
+       "damage": 94436,
+       "damageRate": 0.0442,
+       "partRate": 80.0,
+       "mvp": false,
+       "svp": false,
+       "score": 8.3,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.轩染",
+       "team": "成都AG超玩会",
+       "hero": "曹操",
+       "heroId": 128,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg",
+       "kills": 2,
+       "deaths": 3,
+       "assists": 3,
+       "kda": 1.7,
+       "gold": 12435,
+       "damage": 455835,
+       "damageRate": 0.2379,
+       "partRate": 55.6,
+       "mvp": false,
+       "svp": false,
+       "score": 7.6,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.钟意",
+       "team": "成都AG超玩会",
+       "hero": "铠",
+       "heroId": 193,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/193.jpg",
+       "kills": 4,
+       "deaths": 0,
+       "assists": 5,
+       "kda": 9,
+       "gold": 12505,
+       "damage": 478478,
+       "damageRate": 0.2498,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": true,
+       "score": 9.5,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.一诺",
+       "team": "成都AG超玩会",
+       "hero": "卢雅那",
+       "heroId": 547,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/547.jpg",
+       "kills": 3,
+       "deaths": 3,
+       "assists": 2,
+       "kda": 1.7,
+       "gold": 12577,
+       "damage": 544011,
+       "damageRate": 0.284,
+       "partRate": 55.6,
+       "mvp": false,
+       "svp": false,
+       "score": 7.9,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "长沙TES.A蓝桉",
+       "team": "长沙TES.A",
+       "hero": "苍",
+       "heroId": 177,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/177.jpg",
+       "kills": 3,
+       "deaths": 2,
+       "assists": 4,
+       "kda": 3.5,
+       "gold": 13893,
+       "damage": 580962,
+       "damageRate": 0.2717,
+       "partRate": 70.0,
+       "mvp": false,
+       "svp": false,
+       "score": 7.9,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "长沙TES.A无幻",
+       "team": "长沙TES.A",
+       "hero": "狂铁",
+       "heroId": 503,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/503.jpg",
+       "kills": 2,
+       "deaths": 3,
+       "assists": 6,
+       "kda": 2.7,
+       "gold": 11446,
+       "damage": 302992,
+       "damageRate": 0.1417,
+       "partRate": 80.0,
+       "mvp": false,
+       "svp": false,
+       "score": 8.1,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.大帅",
+       "team": "成都AG超玩会",
+       "hero": "太乙真人",
+       "heroId": 186,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/186.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 8,
+       "kda": 4,
+       "gold": 9241,
+       "damage": 78728,
+       "damageRate": 0.0411,
+       "partRate": 88.9,
+       "mvp": false,
+       "svp": false,
+       "score": 7.6,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "成都AG.长生",
+       "team": "成都AG超玩会",
+       "hero": "不知火舞",
+       "heroId": 157,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/157.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 7,
+       "kda": 3.5,
+       "gold": 11775,
+       "damage": 358676,
+       "damageRate": 0.1872,
+       "partRate": 77.8,
+       "mvp": false,
+       "svp": false,
+       "score": 6.3,
+       "spell": "闪现"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "盾山",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "少司缘",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/577.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "张飞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "赵怀真",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/544.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "东皇太一",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/187.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "牛魔",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/168.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "虞姬",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/174.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "空空儿",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/550.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "张良",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/156.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "镜",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/531.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "铠",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/193.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "曹操",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "沈梦溪",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "狂铁",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/503.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "不知火舞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/157.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "太乙真人",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/186.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "廉颇",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/105.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "苍",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/177.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "卢雅那",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/547.jpg"
+      }
+     ]
+    },
+    {
+     "seq": 6,
+     "winCamp": 2,
+     "winner": "长沙TES.A",
+     "duration": 1178,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "成都AG超玩会",
+       "icon": "https://smhtv-pic.tga.qq.com/02e0582db3b0766ad6fab97e95743e6c.png",
+       "isWin": false,
+       "kills": 3,
+       "deaths": 10,
+       "assists": 7,
+       "gold": 56221,
+       "towers": 0,
+       "bigDragons": 0,
+       "darkTyrants": 0,
+       "tyrants": 0,
+       "kda": 1
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A",
+       "icon": "https://smhtv-pic.tga.qq.com/48f18204fa257197ec49bb6345d14a33.png",
+       "isWin": true,
+       "kills": 10,
+       "deaths": 3,
+       "assists": 31,
+       "gold": 69399,
+       "towers": 9,
+       "bigDragons": 3,
+       "darkTyrants": 3,
+       "tyrants": 2,
+       "kda": 13.6667
+      }
+     ],
+     "players": [
+      {
+       "camp": 1,
+       "name": "成都AG.长生",
+       "team": "成都AG超玩会",
+       "hero": "安琪拉",
+       "heroId": 142,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/142.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 2,
+       "kda": 3,
+       "gold": 11342,
+       "damage": 353523,
+       "damageRate": 0.2087,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A书源",
+       "team": "长沙TES.A",
+       "hero": "橘右京",
+       "heroId": 163,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/163.jpg",
+       "kills": 7,
+       "deaths": 0,
+       "assists": 3,
+       "kda": 10,
+       "gold": 16715,
+       "damage": 939380,
+       "damageRate": 0.3366,
+       "partRate": 100.0,
+       "mvp": true,
+       "svp": false,
+       "score": 9.8,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A帆帆",
+       "team": "长沙TES.A",
+       "hero": "太乙真人",
+       "heroId": 186,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/186.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 9,
+       "kda": 4.5,
+       "gold": 10224,
+       "damage": 48953,
+       "damageRate": 0.0175,
+       "partRate": 90.0,
+       "mvp": false,
+       "svp": false,
+       "score": 7,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "成都AG.轩染",
+       "team": "成都AG超玩会",
+       "hero": "司空震",
+       "heroId": 537,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg",
+       "kills": 1,
+       "deaths": 2,
+       "assists": 1,
+       "kda": 1,
+       "gold": 11317,
+       "damage": 340205,
+       "damageRate": 0.2008,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 5.7,
+       "spell": "狂暴"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A蓝桉",
+       "team": "长沙TES.A",
+       "hero": "戈娅",
+       "heroId": 548,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/548.jpg",
+       "kills": 2,
+       "deaths": 0,
+       "assists": 8,
+       "kda": 10,
+       "gold": 15442,
+       "damage": 797858,
+       "damageRate": 0.2859,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 8.7,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "成都AG.一诺",
+       "team": "成都AG超玩会",
+       "hero": "百里守约",
+       "heroId": 196,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/196.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 2,
+       "kda": 3,
+       "gold": 13204,
+       "damage": 567430,
+       "damageRate": 0.3349,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": true,
+       "score": 6.5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "成都AG.大帅",
+       "team": "成都AG超玩会",
+       "hero": "赵怀真",
+       "heroId": 544,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/544.jpg",
+       "kills": 0,
+       "deaths": 4,
+       "assists": 1,
+       "kda": 0.3,
+       "gold": 8984,
+       "damage": 60155,
+       "damageRate": 0.0355,
+       "partRate": 33.3,
+       "mvp": false,
+       "svp": false,
+       "score": 3.2,
+       "spell": "晕眩"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A无幻",
+       "team": "长沙TES.A",
+       "hero": "影",
+       "heroId": 558,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/558.jpg",
+       "kills": 0,
+       "deaths": 1,
+       "assists": 4,
+       "kda": 4,
+       "gold": 14389,
+       "damage": 562998,
+       "damageRate": 0.2017,
+       "partRate": 40.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "成都AG.钟意",
+       "team": "成都AG超玩会",
+       "hero": "大司命",
+       "heroId": 517,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/517.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 1,
+       "kda": 0.5,
+       "gold": 11374,
+       "damage": 372940,
+       "damageRate": 0.2201,
+       "partRate": 33.3,
+       "mvp": false,
+       "svp": false,
+       "score": 4.4,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "长沙TES.A七",
+       "team": "长沙TES.A",
+       "hero": "不知火舞",
+       "heroId": 157,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/157.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 7,
+       "kda": 8,
+       "gold": 12629,
+       "damage": 441470,
+       "damageRate": 0.1582,
+       "partRate": 80.0,
+       "mvp": false,
+       "svp": false,
+       "score": 7.4,
+       "spell": "闪现"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "盾山",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "赵云",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "张飞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "少司缘",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/577.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "老夫子",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/139.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "张良",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/156.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "暃",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/542.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "空空儿",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/550.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "裴擒虎",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/502.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "司空震",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "太乙真人",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/186.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "不知火舞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/157.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "百里守约",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/196.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "大司命",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/517.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "戈娅",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/548.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "橘右京",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/163.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "赵怀真",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/544.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "安琪拉",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/142.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "影",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/558.jpg"
       }
      ]
     }

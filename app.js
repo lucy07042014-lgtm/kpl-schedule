@@ -211,8 +211,11 @@
   function matchHTML(ev) {
     var d = detailFor(ev);
     var key = keyOf(ev);
-    var live = d ? !!d.live : ev.status === 'live';
-    var ended = d ? !!d.finished : ev.status === 'ended';
+    var dLive = d ? !!d.live : false;
+    // 快照里的 live 可能过夜失效：日期不是今天的，就别再标「进行中」
+    var stale = dLive && ev.date !== L.nowKey();
+    var live = d ? (dLive && !stale) : ev.status === 'live';
+    var ended = d ? (!!d.finished && !stale) : ev.status === 'ended';
     var cls = live ? 'live' : (ended ? 'ended' : '');
     var scoreHTML = '';
     if (d) {
@@ -220,7 +223,6 @@
       var as = d.score[ev.away] || 0;
       scoreHTML = '<span class="score-chip' + (live ? ' live' : '') + '">' + hs + '<i>:</i>' + as + '</span>';
     }
-    var statusTxt = live ? '进行中' : (ended ? '已结束' : '');
 
     return '<article class="match ' + cls + '" data-act="detail" data-key="' + esc(key) + '" role="button" tabindex="0">' +
       '<div class="match-time"><b>' + esc(ev.start) + '</b><span>' + esc(ev.bo) + '</span></div>' +
@@ -229,9 +231,10 @@
         '<div class="match-sub">' +
           '<span class="chip">' + esc(ev.stage) + '</span>' +
           (live ? '<span class="status-dot live"><i></i>进行中</span>' : '') +
+          (stale ? '<span class="status-dot wait">待更新</span>' : '') +
           (ended ? '<span class="status-dot ended">已结束</span>' : '') +
           scoreHTML +
-          (ev.tbd ? '<span>对阵待定</span>' : (ended || (live && d) ? '' : '<span>' + esc(ev.end) + ' 结束</span>')) +
+          (ev.tbd ? '<span>对阵待定</span>' : (ended || stale || (live && d) ? '' : '<span>' + esc(ev.end) + ' 结束</span>')) +
         '</div>' +
       '</div>' +
       '<button class="cal-btn" data-act="ics-one" data-id="' + esc(ev.id) + '" aria-label="加入日历" title="加入日历">' + ICON.cal + '</button>' +
@@ -374,7 +377,10 @@
     state.gameIdx = d && d.games.length ? d.games.length - 1 : 0;
     document.body.classList.add('lock');
     render();
-    if (d && d.live) startPoll();
+    if (d && d.live) {
+      startPoll();
+      refreshMatch(key, true);   // 点进来先拉一次，别让用户看到隔夜的旧比分
+    }
   }
 
   function closeDetail() {
@@ -517,7 +523,9 @@
 
     var hs = d ? (d.score[ev.home] || 0) : 0;
     var as = d ? (d.score[ev.away] || 0) : 0;
-    var stateTxt = !d ? '未开始' : (d.finished ? '已结束' : '进行中');
+    // 快照里的 live 可能过夜失效
+    var dStale = !!(d && d.live && ev.date !== L.nowKey());
+    var stateTxt = !d ? '未开始' : (d.finished ? '已结束' : (dStale ? '待更新' : '进行中'));
 
     var head = '<div class="detail-top">' +
       '<button class="icon-btn" data-act="detail-back" aria-label="返回">' + ICON.back + '</button>' +
@@ -531,7 +539,8 @@
         '<b>' + esc(ev.home) + '</b></div>' +
       '<div class="sb-mid">' +
         '<div class="sb-num"><b>' + (d ? hs : '–') + '</b><i>:</i><b>' + (d ? as : '–') + '</b></div>' +
-        '<span class="sb-tag' + (d && d.live ? ' live' : '') + '">' + stateTxt + (d && d.live ? ' · 自动更新' : '') + '</span>' +
+        '<span class="sb-tag' + (d && d.live && !dStale ? ' live' : '') + '">' + stateTxt +
+          (d && d.live && !dStale ? ' · 自动更新' : (dStale ? ' · 正在同步' : '')) + '</span>' +
       '</div>' +
       '<div class="sb-side"><span class="avatar" style="' + avatarStyle(ev.away) + '">' + esc(L.abbr(ev.away)) + '</span>' +
         '<b>' + esc(ev.away) + '</b></div>' +
@@ -622,17 +631,31 @@
         return;
       }
       var r = await apiJSON('/match/battles/open?match_id=' + matchId);
-      var list = (r.results || []).filter(function (b) { return b.status === 2; });
+      var all = r.results || [];
+      var done = all.filter(function (b) { return b.status === 2; });
       var have = d ? d.games.length : 0;
-      if (list.length <= have) {
+      var isPast = ev.date < L.nowKey();      // 往日的比赛一定已经打完了
+      var pending = all.length > done.length; // 还有没打完的局
+
+      if (done.length <= have) {
+        // 局数没变。但如果这是往日的比赛、又没在打的局，说明快照卡在 live 上了，直接收尾
+        if (d && isPast && !pending && d.live) {
+          L.closeSeries(d);
+          stopPoll();
+          state.detailBusy = false;
+          toast('已更新：' + (d.winner || '比赛') + ' 结束');
+          render();
+          return;
+        }
         if (!silent) toast(have ? '已经是最新：' + have + ' 局' : '还没有结束的局');
         state.detailBusy = false;
         if (state.route === 'detail') renderDetail();
         return;
       }
+
       var games = [];
-      for (var i = 0; i < list.length; i++) {
-        var one = await apiJSON('/battle/open?battle_id=' + list[i].battle_id);
+      for (var i = 0; i < done.length; i++) {
+        var one = await apiJSON('/battle/open?battle_id=' + done[i].battle_id);
         var g = L.normalizeBattle(one.data);
         if (g) games.push(g);
       }
@@ -651,6 +674,7 @@
         g.teams.forEach(function (t) { nd.icons[t.name] = t.icon; });
       });
       L.recomputeSeries(nd);
+      if (isPast && !pending) L.closeSeries(nd);
       state.details[key] = nd;
       state.gameIdx = Math.min(Math.max(state.gameIdx, 0), games.length - 1);
       if (nd.live) startPoll(); else stopPoll();
@@ -662,19 +686,15 @@
     render();
   }
 
-  /** 列表页后台轻量轮询：今天有进行中的比赛就拉一次（每 5 分钟） */
+  /**
+   * 后台轻量同步：每次只处理一场
+   *   1. 今天正在打的
+   *   2. 往常的比赛快照还挂着 live（隔夜的情况）
+   */
   function autoUpdateLive() {
     if (state.detailBusy) return;
-    var today = L.nowKey();
-    var list = state.evs || [];
-    for (var i = 0; i < list.length; i++) {
-      if (list[i].date !== today) continue;
-      var d = state.details[keyOf(list[i])];
-      if (d && d.live && d.matchId) {
-        refreshMatch(keyOf(list[i]), true);
-        return;
-      }
-    }
+    var target = L.nextRefreshTarget(state.evs || [], state.details, L.nowKey());
+    if (target) refreshMatch(target.key, true);
   }
 
   /* ----------------------------- 倒计时 ----------------------------- */
@@ -1036,6 +1056,9 @@
     if (btnRefresh) btnRefresh.innerHTML = ICON.refresh;
     render();
 
+    // 一打开就同步一次：隔夜之后，内置快照里可能还挂着「进行中」的旧比赛
+    setTimeout(autoUpdateLive, 500);
+
     setInterval(tick, 1000);
 
     var lastKey = L.nowKey();
@@ -1044,6 +1067,7 @@
       if (L.nowKey() !== lastKey) {
         lastKey = L.nowKey();
         render();
+        autoUpdateLive();          // 跨天了，把昨天挂着的比赛收尾
       }
       autoTick++;
       if (autoTick % 10 === 0) autoUpdateLive();
@@ -1058,11 +1082,12 @@
       if (changed) render();
     }, 30000);
 
-    // 回到前台时刷新「今天」与倒计时
+    // 回到前台：重算「今天」、刷倒计时，并补一次同步
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState !== 'visible') return;
       if (L.nowKey() !== lastKey) { lastKey = L.nowKey(); render(); }
       else tick();
+      autoUpdateLive();
     });
   }
 

@@ -509,10 +509,55 @@
     };
   }
 
-  /** 赛程 key：日期 + 排序后的两队名，用于把战报对到赛程 */
-  function matchKey(date, a, b) {
+  /**
+   * 强制收尾：把还在 live 的比分定格。
+   * 用于「往日的比赛」——官方已经打完，但本地快照还停在 live 的情况。
+   */
+  function closeSeries(detail) {
+    if (!detail) return detail;
+    recomputeSeries(detail);
+    var best = 0, win = '';
+    (detail.teams || []).forEach(function (n) {
+      var s = (detail.score && detail.score[n]) || 0;
+      if (s > best) { best = s; win = n; }
+    });
+    detail.finished = true;
+    detail.live = false;
+    if (win) detail.winner = win;
+    return detail;
+  }
+
+  /** 赛程 key：日期 + 排序后的两队名，用于把战报对到赛程 */  function matchKey(date, a, b) {
     var pair = [a, b].sort();
     return date + '|' + pair[0] + '|' + pair[1];
+  }
+
+  /**
+   * 找出该去刷新战报的比赛：
+   *   1. 今天还在打的
+   *   2. 往日的数据快照还挂着 live（比如隔夜没刷新）
+   * @returns {{key:string,matchId:string,date:string,stale:boolean}|null}
+   */
+  function nextRefreshTarget(events, details, todayKey, maxAgeDays) {
+    var today = todayKey || nowKey();
+    var maxAge = maxAgeDays == null ? 2 : maxAgeDays;
+    var c = new Date(new Date(today + 'T00:00:00Z').getTime() - maxAge * 86400000);
+    var cutoff = c.getUTCFullYear() + '-' + pad(c.getUTCMonth() + 1) + '-' + pad(c.getUTCDate());
+
+    var todayHit = null, pastHit = null;
+    (events || []).forEach(function (ev) {
+      if (!ev || !ev.date) return;
+      var k = matchKey(ev.date, ev.home, ev.away);
+      var d = details && details[k];
+      if (!d || !d.live || !d.matchId) return;
+      var hit = { key: k, matchId: d.matchId, date: ev.date, stale: ev.date !== today };
+      if (ev.date === today) {
+        if (!todayHit) todayHit = hit;
+      } else if (ev.date >= cutoff && ev.date < today) {
+        if (!pastHit || ev.date > pastHit.date) pastHit = hit;
+      }
+    });
+    return todayHit || pastHit || null;
   }
 
   var api = {
@@ -543,8 +588,10 @@
     neededWins: neededWins,
     gameWinner: gameWinner,
     recomputeSeries: recomputeSeries,
+    closeSeries: closeSeries,
     normalizeBattle: normalizeBattle,
-    matchKey: matchKey
+    matchKey: matchKey,
+    nextRefreshTarget: nextRefreshTarget
   };
 
   root.KPLLib = api;

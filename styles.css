@@ -439,6 +439,14 @@ main { padding: 14px 14px 0; }
 .status-dot.live { color: var(--cyan); }
 .status-dot.live i { animation: pulse 1.5s ease-in-out infinite; }
 .status-dot.ended { color: var(--muted); font-weight: 500; }
+.status-dot.wait { color: var(--muted); font-weight: 600; }
+.status-dot.wait::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+}
 .status-dot.upcoming { color: var(--gold); font-weight: 600; }
 
 .cal-btn {
