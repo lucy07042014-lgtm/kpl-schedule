@@ -527,37 +527,58 @@
     return detail;
   }
 
-  /** 赛程 key：日期 + 排序后的两队名，用于把战报对到赛程 */  function matchKey(date, a, b) {
+  /** 赛程 key：日期 + 排序后的两队名，用于把战报对到赛程 */
+  function matchKey(date, a, b) {
     var pair = [a, b].sort();
     return date + '|' + pair[0] + '|' + pair[1];
   }
 
   /**
-   * 找出该去刷新战报的比赛：
-   *   1. 今天还在打的
-   *   2. 往日的数据快照还挂着 live（比如隔夜没刷新）
-   * @returns {{key:string,matchId:string,date:string,stale:boolean}|null}
+   * 列出该去刷新战报的比赛，按优先级：
+   *   1. 今天有快照、还在打的
+   *   2. 今天还没拿到过数据、但按时间应该已经在打的（新比赛，需要先「发现」match_id）
+   *   3. 往日快照还挂着 live 的（隔夜没刷新）
+   * @returns {Array<{key:string,matchId:string,date:string,stale:boolean,discover:boolean}>}
    */
-  function nextRefreshTarget(events, details, todayKey, maxAgeDays) {
+  function refreshTargets(events, details, todayKey, maxAgeDays, limit, nowMs) {
     var today = todayKey || nowKey();
     var maxAge = maxAgeDays == null ? 2 : maxAgeDays;
+    var now = nowMs == null ? Date.now() : nowMs;
     var c = new Date(new Date(today + 'T00:00:00Z').getTime() - maxAge * 86400000);
     var cutoff = c.getUTCFullYear() + '-' + pad(c.getUTCMonth() + 1) + '-' + pad(c.getUTCDate());
 
-    var todayHit = null, pastHit = null;
+    var liveToday = [], freshToday = [], past = [];
     (events || []).forEach(function (ev) {
       if (!ev || !ev.date) return;
       var k = matchKey(ev.date, ev.home, ev.away);
       var d = details && details[k];
-      if (!d || !d.live || !d.matchId) return;
-      var hit = { key: k, matchId: d.matchId, date: ev.date, stale: ev.date !== today };
-      if (ev.date === today) {
-        if (!todayHit) todayHit = hit;
-      } else if (ev.date >= cutoff && ev.date < today) {
-        if (!pastHit || ev.date > pastHit.date) pastHit = hit;
+
+      if (d && d.live && d.matchId) {
+        var hit = { key: k, matchId: d.matchId, date: ev.date, stale: ev.date !== today, discover: false };
+        if (ev.date === today) liveToday.push(hit);
+        else if (ev.date >= cutoff && ev.date < today) past.push(hit);
+        return;
+      }
+
+      // 还没有任何快照：只针对「今天、已经开打、且没打太久」的比赛去尝试发现数据
+      if (!d && ev.date === today && ev.startAt && ev.endAt) {
+        var s = new Date(ev.startAt).getTime();
+        var e = new Date(ev.endAt).getTime();
+        if (now >= s - 5 * 60000 && now <= e + 3 * 3600000) {
+          freshToday.push({ key: k, matchId: '', date: ev.date, stale: false, discover: true });
+        }
       }
     });
-    return todayHit || pastHit || null;
+
+    past.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    var all = liveToday.concat(freshToday, past);
+    return limit == null ? all : all.slice(0, limit);
+  }
+
+  /** 兼容旧调用：只要一个目标 */
+  function nextRefreshTarget(events, details, todayKey, maxAgeDays) {
+    var list = refreshTargets(events, details, todayKey, maxAgeDays, 1);
+    return list.length ? list[0] : null;
   }
 
   var api = {
@@ -591,7 +612,8 @@
     closeSeries: closeSeries,
     normalizeBattle: normalizeBattle,
     matchKey: matchKey,
-    nextRefreshTarget: nextRefreshTarget
+    nextRefreshTarget: nextRefreshTarget,
+    refreshTargets: refreshTargets
   };
 
   root.KPLLib = api;

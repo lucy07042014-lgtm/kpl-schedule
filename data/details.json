@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-22T05:54:16+08:00",
+ "updatedAt": "2026-10-22T18:48:13+08:00",
  "source": "王者荣耀赛事数据平台（官方）",
  "matches": {
   "2026-10-18|KSG|上海EDG.M": {
@@ -17539,6 +17539,376 @@
    "home": "北京WB",
    "away": "济南RW侠",
    "eventId": "2026-10-17T2000-104c9034"
+  },
+  "2026-10-22|南通Hero久竞|杭州LGD.NBW": {
+   "matchId": "2026102201",
+   "date": "2026-10-22",
+   "bo": "BO7",
+   "teams": [
+    "南通Hero久竞",
+    "杭州LGD.NBW"
+   ],
+   "icons": {
+    "南通Hero久竞": "https://smhtv-pic.tga.qq.com/85b4fe06e4a722bd5435676bd9ff1384.png",
+    "杭州LGD.NBW": "https://smhtv-pic.tga.qq.com/a29bcb1a579369888cc9a87637274822.png"
+   },
+   "score": {
+    "南通Hero久竞": 0,
+    "杭州LGD.NBW": 1
+   },
+   "winner": "",
+   "finished": false,
+   "live": true,
+   "games": [
+    {
+     "seq": 1,
+     "winCamp": 2,
+     "winner": "杭州LGD.NBW",
+     "duration": 1132,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "南通Hero久竞",
+       "icon": "https://smhtv-pic.tga.qq.com/85b4fe06e4a722bd5435676bd9ff1384.png",
+       "isWin": false,
+       "kills": 6,
+       "deaths": 10,
+       "assists": 16,
+       "gold": 57079,
+       "towers": 6,
+       "bigDragons": 1,
+       "darkTyrants": 3,
+       "tyrants": 2,
+       "kda": 2.2
+      },
+      {
+       "camp": 2,
+       "name": "杭州LGD.NBW",
+       "icon": "https://smhtv-pic.tga.qq.com/a29bcb1a579369888cc9a87637274822.png",
+       "isWin": true,
+       "kills": 10,
+       "deaths": 6,
+       "assists": 26,
+       "gold": 58672,
+       "towers": 6,
+       "bigDragons": 1,
+       "darkTyrants": 0,
+       "tyrants": 0,
+       "kda": 6
+      }
+     ],
+     "players": [
+      {
+       "camp": 1,
+       "name": "南通Hero久竞.坦然",
+       "team": "南通Hero久竞",
+       "hero": "蒙恬",
+       "heroId": 527,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/527.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 2,
+       "kda": 3,
+       "gold": 9728,
+       "damage": 253476,
+       "damageRate": 0.1147,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6.7,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "南通Hero久竞.妖刀",
+       "team": "南通Hero久竞",
+       "hero": "戈娅",
+       "heroId": 548,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/548.jpg",
+       "kills": 2,
+       "deaths": 1,
+       "assists": 4,
+       "kda": 6,
+       "gold": 14369,
+       "damage": 775656,
+       "damageRate": 0.351,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": true,
+       "score": 8.8,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "杭州LGD.NBW.小久",
+       "team": "杭州LGD.NBW",
+       "hero": "莱西奥",
+       "heroId": 545,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/545.jpg",
+       "kills": 6,
+       "deaths": 0,
+       "assists": 3,
+       "kda": 9,
+       "gold": 14211,
+       "damage": 719175,
+       "damageRate": 0.3427,
+       "partRate": 90.0,
+       "mvp": true,
+       "svp": false,
+       "score": 10.8,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "南通Hero久竞.玖熙",
+       "team": "南通Hero久竞",
+       "hero": "海月",
+       "heroId": 521,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg",
+       "kills": 3,
+       "deaths": 3,
+       "assists": 1,
+       "kda": 1.3,
+       "gold": 11312,
+       "damage": 369209,
+       "damageRate": 0.1671,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 6.5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "南通Hero久竞.白清",
+       "team": "南通Hero久竞",
+       "hero": "少司缘",
+       "heroId": 577,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/577.jpg",
+       "kills": 0,
+       "deaths": 3,
+       "assists": 4,
+       "kda": 1.3,
+       "gold": 9197,
+       "damage": 39148,
+       "damageRate": 0.0177,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 4.9,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "杭州LGD.NBW.小崽",
+       "team": "杭州LGD.NBW",
+       "hero": "张飞",
+       "heroId": 171,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 8,
+       "kda": 9,
+       "gold": 9590,
+       "damage": 58503,
+       "damageRate": 0.0279,
+       "partRate": 90.0,
+       "mvp": false,
+       "svp": false,
+       "score": 10.7,
+       "spell": "治疗术"
+      },
+      {
+       "camp": 2,
+       "name": "杭州LGD.NBW.断雨",
+       "team": "杭州LGD.NBW",
+       "hero": "橘右京",
+       "heroId": 163,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/163.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 7,
+       "kda": 8,
+       "gold": 12612,
+       "damage": 575451,
+       "damageRate": 0.2742,
+       "partRate": 80.0,
+       "mvp": false,
+       "svp": false,
+       "score": 7.1,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "杭州LGD.NBW.小落",
+       "team": "杭州LGD.NBW",
+       "hero": "夏洛特",
+       "heroId": 536,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg",
+       "kills": 1,
+       "deaths": 3,
+       "assists": 4,
+       "kda": 1.7,
+       "gold": 12472,
+       "damage": 439016,
+       "damageRate": 0.2092,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6.3,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "杭州LGD.NBW.九尾",
+       "team": "杭州LGD.NBW",
+       "hero": "武则天",
+       "heroId": 136,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/136.jpg",
+       "kills": 1,
+       "deaths": 2,
+       "assists": 4,
+       "kda": 2.5,
+       "gold": 9787,
+       "damage": 306174,
+       "damageRate": 0.1459,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.4,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "南通Hero久竞.落尘",
+       "team": "南通Hero久竞",
+       "hero": "赵云",
+       "heroId": 107,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 5,
+       "kda": 2.5,
+       "gold": 12473,
+       "damage": 772638,
+       "damageRate": 0.3496,
+       "partRate": 83.3,
+       "mvp": false,
+       "svp": false,
+       "score": 6.6,
+       "spell": "惩击"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "元流之子(辅助)",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/585.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "敖隐",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "盾山",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "关羽",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/140.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "阿古朵",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/533.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "曹操",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "元流之子(坦克)",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/581.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "司空震",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "沈梦溪",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 2,
+       "hero": "夏洛特",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "海月",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "张飞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "少司缘",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/577.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "戈娅",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/548.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "莱西奥",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/545.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "武则天",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/136.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "赵云",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "蒙恬",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/527.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "橘右京",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/163.jpg"
+      }
+     ]
+    }
+   ],
+   "key": "2026-10-22|南通Hero久竞|杭州LGD.NBW",
+   "home": "杭州LGD.NBW",
+   "away": "南通Hero久竞",
+   "eventId": "2026-10-22T1800-718b4d84"
   }
  }
 }

@@ -42,7 +42,9 @@
     detailKey: null,
     gameIdx: 0,
     detailScroll: 0,
-    detailBusy: false
+    detailBusy: false,
+    syncing: {},     // key -> true，正在拉战报
+    detailIds: {}    // key -> 官方 match_id（发现过一次就记住）
   };
 
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
@@ -232,6 +234,7 @@
           '<span class="chip">' + esc(ev.stage) + '</span>' +
           (live ? '<span class="status-dot live"><i></i>进行中</span>' : '') +
           (stale ? '<span class="status-dot wait">待更新</span>' : '') +
+          (state.syncing[key] ? '<span class="status-dot wait">同步中</span>' : '') +
           (ended ? '<span class="status-dot ended">已结束</span>' : '') +
           scoreHTML +
           (ev.tbd ? '<span>对阵待定</span>' : (ended || stale || (live && d) ? '' : '<span>' + esc(ev.end) + ' 结束</span>')) +
@@ -377,9 +380,12 @@
     state.gameIdx = d && d.games.length ? d.games.length - 1 : 0;
     document.body.classList.add('lock');
     render();
-    if (d && d.live) {
+    // 有快照且还在打 / 没快照但已经开打（含往日的）→ 都先拉一次
+    var ev = detailEvent(key);
+    var due = ev && (ev.status === 'live' || ev.date < L.nowKey());
+    if ((d && d.live) || (!d && due)) {
       startPoll();
-      refreshMatch(key, true);   // 点进来先拉一次，别让用户看到隔夜的旧比分
+      refreshMatch(key, true);
     }
   }
 
@@ -523,9 +529,12 @@
 
     var hs = d ? (d.score[ev.home] || 0) : 0;
     var as = d ? (d.score[ev.away] || 0) : 0;
-    // 快照里的 live 可能过夜失效
+    // 快照里的 live 可能过夜失效；没有快照但比赛已经开打时，也别写「未开始」
     var dStale = !!(d && d.live && ev.date !== L.nowKey());
-    var stateTxt = !d ? '未开始' : (d.finished ? '已结束' : (dStale ? '待更新' : '进行中'));
+    var schedulingLive = !d && ev.status === 'live';
+    var stateTxt = !d
+      ? (schedulingLive ? '进行中' : '未开始')
+      : (d.finished ? '已结束' : (dStale ? '待更新' : '进行中'));
 
     var head = '<div class="detail-top">' +
       '<button class="icon-btn" data-act="detail-back" aria-label="返回">' + ICON.back + '</button>' +
@@ -548,10 +557,17 @@
 
     var body;
     if (!d || !games.length) {
+      var fetching = !!state.syncing[key];
+      var title = schedulingLive
+        ? (fetching ? '正在获取战报…' : '战报还没出')
+        : '比赛还没开始';
+      var desc = schedulingLive
+        ? '第一局结束后官方才会有数据。<br>页面会自动同步，也可以点下面重试。'
+        : '开赛后会显示首发阵容与逐局战报。';
       body = '<div class="empty" style="margin-top:16px">' +
         '<div class="icon">' + ICON.calX + '</div>' +
-        '<h3>战报还没出</h3>' +
-        '<p>官方数据会在第一局结束后出现。<br>比赛进行中，点右上角刷新可以拉取最新进度。</p>' +
+        '<h3>' + title + '</h3>' +
+        '<p>' + desc + '</p>' +
         '<button class="btn btn-ghost" style="flex:0 0 auto;margin:0 auto" data-act="detail-refresh">刷新战报</button>' +
       '</div>';
     } else {
@@ -619,17 +635,22 @@
     if (!ev) return;
     var d = state.details[key];
     state.detailBusy = true;
+    state.syncing[key] = true;
     if (state.route === 'detail') renderDetail();
+    else render();                     // 列表里立刻显示「同步中」
     if (!silent) toast('正在拉取官方战报…');
 
     try {
-      var matchId = (d && d.matchId) || (await discoverMatchId(ev));
+      var matchId = (d && d.matchId) || state.detailIds[key] || (await discoverMatchId(ev));
       if (!matchId) {
         if (!silent) toast('官方还没有这场比赛的逐局数据');
         state.detailBusy = false;
+        delete state.syncing[key];
         if (state.route === 'detail') renderDetail();
+        else render();
         return;
       }
+      state.detailIds[key] = matchId;
       var r = await apiJSON('/match/battles/open?match_id=' + matchId);
       var all = r.results || [];
       var done = all.filter(function (b) { return b.status === 2; });
@@ -643,13 +664,16 @@
           L.closeSeries(d);
           stopPoll();
           state.detailBusy = false;
+          delete state.syncing[key];
           toast('已更新：' + (d.winner || '比赛') + ' 结束');
           render();
           return;
         }
         if (!silent) toast(have ? '已经是最新：' + have + ' 局' : '还没有结束的局');
         state.detailBusy = false;
+        delete state.syncing[key];
         if (state.route === 'detail') renderDetail();
+        else render();
         return;
       }
 
@@ -683,18 +707,23 @@
       if (!silent) toast('拉取失败，请检查网络后重试');
     }
     state.detailBusy = false;
+    delete state.syncing[key];
     render();
   }
 
   /**
-   * 后台轻量同步：每次只处理一场
-   *   1. 今天正在打的
-   *   2. 往常的比赛快照还挂着 live（隔夜的情况）
+   * 后台同步：按优先级处理几场
+   *   1. 今天有快照、还在打的
+   *   2. 今天还没拿到数据、但按时间已经开打的（需要先发现 match_id）
+   *   3. 往日快照还挂着 live 的（隔夜情况）
    */
-  function autoUpdateLive() {
+  async function autoUpdateLive() {
     if (state.detailBusy) return;
-    var target = L.nextRefreshTarget(state.evs || [], state.details, L.nowKey());
-    if (target) refreshMatch(target.key, true);
+    var list = L.refreshTargets(state.evs || [], state.details, L.nowKey(), 2, 3);
+    for (var i = 0; i < list.length; i++) {
+      if (state.detailBusy) break;
+      await refreshMatch(list[i].key, true);
+    }
   }
 
   /* ----------------------------- 倒计时 ----------------------------- */
