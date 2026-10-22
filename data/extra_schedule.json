@@ -1,0 +1,11 @@
+{
+  "note": "官方 ics 源（KPL-Calendar）还没同步的赛程，在这里手工补。update.py 会把它们合并进 schedule.json；已有同名对局会自动去重。",
+  "source": "2026 KPL 年度总决赛 · 淘汰赛抽签结果（2026-10-22 21:10 公布）",
+  "sourceUrl": "https://wap.zhibo8.com/news/web/other/2026-10-22/6ada0b3c02967native.htm",
+  "matches": [
+    { "date": "2026-10-27", "start": "18:00", "home": "广州TTG", "away": "北京JDG" },
+    { "date": "2026-10-28", "start": "18:00", "home": "长沙TES.A", "away": "重庆狼队" },
+    { "date": "2026-10-29", "start": "18:00", "home": "KSG", "away": "北京WB" },
+    { "date": "2026-10-30", "start": "18:00", "home": "杭州LGD.NBW", "away": "上海EDG.M" }
+  ]
+}

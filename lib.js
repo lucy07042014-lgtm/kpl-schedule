@@ -565,7 +565,13 @@
         var s = new Date(ev.startAt).getTime();
         var e = new Date(ev.endAt).getTime();
         if (now >= s - 5 * 60000 && now <= e + 3 * 3600000) {
-          freshToday.push({ key: k, matchId: '', date: ev.date, stale: false, discover: true });
+          freshToday.push({
+            key: k,
+            matchId: ev.matchId || '',   // 赛程来自官方接口时直接就有，不用再探测
+            date: ev.date,
+            stale: false,
+            discover: !ev.matchId
+          });
         }
       }
     });

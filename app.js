@@ -642,7 +642,7 @@
     if (!silent) toast('正在拉取官方战报…');
 
     try {
-      var matchId = (d && d.matchId) || state.detailIds[key] || (await discoverMatchId(ev));
+      var matchId = (d && d.matchId) || state.detailIds[key] || ev.matchId || (await discoverMatchId(ev));
       if (!matchId) {
         if (!silent) toast('官方还没有这场比赛的逐局数据');
         state.detailBusy = false;
