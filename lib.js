@@ -231,7 +231,8 @@
   }
 
   function eventSummary(ev, prefix) {
-    if (ev.tbd) return (prefix || 'KPL') + ' 总决赛 · 对阵待定';
+    // 对阵没抽出来时用该场自己的阶段（淘汰赛的占位日期不能都写成「总决赛」）
+    if (ev.tbd) return (prefix || 'KPL') + ' ' + (ev.stage || '赛程') + ' · 对阵待定';
     return (prefix || 'KPL') + ' ' + ev.home + ' vs ' + ev.away;
   }
 
