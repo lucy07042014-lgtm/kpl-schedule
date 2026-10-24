@@ -1,5 +1,5 @@
 {
-  "note": "官方 ics 源（KPL-Calendar）还没同步的赛程，在这里手工补。update.py 会把它们合并进 schedule.json；已有同名对局会自动去重。",
+  "note": "官方赛事平台还没公布的赛程，在这里手工补。update.py 会把它们合并进 schedule.json；已有同名对局会自动去重（2026-10-24：下面 4 场官方已全部公布并带 matchId，此文件仅作兜底保留）。",
   "source": "2026 KPL 年度总决赛 · 淘汰赛抽签结果（2026-10-22 21:10 公布）",
   "sourceUrl": "https://wap.zhibo8.com/news/web/other/2026-10-22/6ada0b3c02967native.htm",
   "matches": [
