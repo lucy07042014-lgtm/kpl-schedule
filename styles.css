@@ -362,6 +362,42 @@ main { padding: 14px 14px 0; }
 }
 .day-count { font-size: 11.5px; color: var(--muted); }
 
+/* 「待定」赛程折叠块：官方先排了日期，对阵还没抽出来 */
+details.day.pending {
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  padding: 0 13px 13px;
+  background: color-mix(in srgb, var(--surface-3) 32%, transparent);
+}
+details.day.pending > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 13px 0 11px;
+  cursor: pointer;
+  list-style: none;
+}
+details.day.pending > summary::-webkit-details-marker { display: none; }
+.pending-range { font-size: 14.5px; font-weight: 800; letter-spacing: 0.01em; }
+.pending-meta { font-size: 12px; font-weight: 500; color: var(--muted); }
+details.day.pending > summary::after {
+  content: '▾';
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+details.day.pending[open] > summary::after { transform: rotate(180deg); }
+details.day.pending .pending-hint {
+  margin: 0 0 11px;
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+details.day.pending .day { margin-top: 10px; }
+details.day.pending .day-head { padding: 0 0 7px; }
+details.day.pending .day-date { font-size: 13.5px; }
+
 /* ---------------- 比赛行 ---------------- */
 
 .match {
