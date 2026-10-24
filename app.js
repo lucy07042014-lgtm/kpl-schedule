@@ -5,9 +5,9 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
-  var BUILD = '2026-10-23 05:35';   // 出问题时先看这个，能确定手机上跑的是哪一版
+  var BUILD = '2026-10-24 21:05';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
-  var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2' };
+  var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2', hideEnded: 'kpl.hideEnded.v2' };
 
   var SOURCES = [
     { id: 'api', url: 'https://api.github.com/repos/futuretech6/KPL-Calendar/contents/kpl.ics?ref=actions', json: true },
@@ -34,7 +34,7 @@
     data: BASE,
     evs: [],
     tab: 'today',
-    hideEnded: false,
+    hideEnded: true,   // 「全部」默认只看还没打完的；boot 时会被本地记忆覆盖
     followed: [],
     busy: false,
     details: (window.KPL_DETAILS && window.KPL_DETAILS.matches) || {},
@@ -289,16 +289,23 @@
 
   function allHTML(evs) {
     var days = L.groupByDay(evs);
+    var shown = days;
+    var hidden = 0;
     if (state.hideEnded) {
-      days = days.map(function (d) {
+      shown = days.map(function (d) {
         return { date: d.date, events: d.events.filter(function (e) { return e.status !== 'ended'; }) };
       }).filter(function (d) { return d.events.length; });
+      var left = shown.reduce(function (n, d) { return n + d.events.length; }, 0);
+      hidden = evs.length - left;
     }
+    var hint = shown.length + ' 个比赛日' + (hidden ? ' · 已隐藏 ' + hidden + ' 场' : '');
     var head = '<div class="section-head"><h2>全部赛程</h2>' +
-      '<span class="hint">' + days.length + ' 个比赛日</span><span class="spacer"></span>' +
+      '<span class="hint">' + hint + '</span><span class="spacer"></span>' +
       '<button class="switch" data-act="toggle-ended" aria-pressed="' + state.hideEnded + '">隐藏已结束</button></div>';
-    if (!days.length) return head + emptyHTML('没有待进行的比赛', '赛程已全部结束，或已开启「隐藏已结束」。', '显示全部', 'toggle-ended');
-    return head + days.map(dayHTML).join('');
+    if (!shown.length) {
+      return head + emptyHTML('没有待进行的比赛', '赛程已全部结束，或已开启「隐藏已结束」。', '显示全部', 'toggle-ended');
+    }
+    return head + shown.map(dayHTML).join('');
   }
 
   function mineEvents(evs) {
@@ -969,6 +976,7 @@
         break;
       case 'toggle-ended':
         state.hideEnded = !state.hideEnded;
+        saveJson(LS.hideEnded, state.hideEnded);
         render();
         break;
       case 'follow': {
@@ -1081,6 +1089,9 @@
   function boot() {
     state.followed = loadJson(LS.follow, []) || [];
     if (!Array.isArray(state.followed)) state.followed = [];
+    // 默认隐藏已结束；用户手动切换过就按他的记忆来
+    var savedHide = loadJson(LS.hideEnded, null);
+    state.hideEnded = savedHide === null ? true : savedHide !== false;
 
     var cache = loadCache();
     if (cache) state.data = cache;
