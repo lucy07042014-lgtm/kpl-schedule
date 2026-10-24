@@ -5,7 +5,7 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
-  var BUILD = '2026-10-24 21:05';   // 出问题时先看这个，能确定手机上跑的是哪一版
+  var BUILD = '2026-10-24 22:50';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
   var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2', hideEnded: 'kpl.hideEnded.v2' };
 
@@ -148,7 +148,7 @@
         if (hd && hd.live) { live = evs[hi]; break; }
       }
     }
-    var next = L.nextUpcoming(evs);
+    var next = nextKnown(evs);
     var ev = live || next;
 
     if (!ev) {
@@ -209,6 +209,17 @@
 
   function detailFor(ev) {
     return state.details[keyOf(ev)] || null;
+  }
+
+  /** 官方先排了日期、对阵还没抽出来的占位场（两队都写「待定」） */
+  function isTbdEvent(ev) {
+    return !!ev.tbd || !ev.home || !ev.away || ev.home === '待定' || ev.away === '待定';
+  }
+
+  /** 优先选有对阵的下一场；全季只剩待定场时才退回待定 */
+  function nextKnown(evs) {
+    var known = evs.filter(function (e) { return !isTbdEvent(e); });
+    return L.nextUpcoming(known) || L.nextUpcoming(evs);
   }
 
   function matchHTML(ev) {
@@ -279,12 +290,31 @@
     var todays = evs.filter(function (e) { return e.date === key; });
     if (todays.length) return dayHTML({ date: key, events: todays });
 
-    var next = L.nextUpcoming(evs);
+    var next = nextKnown(evs);
     var desc = next
       ? '下一场：<b style="color:var(--text-2)">' + esc(L.dateLabel(next.date) + ' ' + L.weekdayCN(next.date) + ' ' + next.start) + '</b><br>' +
         esc(next.home) + ' vs ' + esc(next.away)
       : '本赛季的赛程已经全部结束，感谢一起观赛。';
     return '<div style="margin-top:16px">' + emptyHTML('今天没有比赛', desc, '看看全部赛程', 'tab-all') + '</div>';
+  }
+
+  /** 连续多个「待定」比赛日折成一块，点开再看每天（避免整屏空卡） */
+  function pendingHTML(days) {
+    var first = days[0], last = days[days.length - 1];
+    var events = [];
+    days.forEach(function (d) { events = events.concat(d.events); });
+    var stage = events[0].stage || '';
+    var label = first.date === last.date
+      ? L.dateLabel(first.date)
+      : L.dateLabel(first.date) + ' – ' + L.dateLabel(last.date);
+    return '<details class="day pending">' +
+      '<summary class="pending-summary">' +
+        '<span class="pending-range">' + esc(label) + '</span>' +
+        '<span class="pending-meta">' + (stage ? esc(stage) + ' · ' : '') + events.length + ' 场待定</span>' +
+      '</summary>' +
+      '<p class="pending-hint">对阵还没抽出来，先按官方公布的日期排着；抽签后会自动变成具体对局。点开可以看每天的开赛时间和加入日历。</p>' +
+      days.map(dayHTML).join('') +
+    '</details>';
   }
 
   function allHTML(evs) {
@@ -305,7 +335,35 @@
     if (!shown.length) {
       return head + emptyHTML('没有待进行的比赛', '赛程已全部结束，或已开启「隐藏已结束」。', '显示全部', 'toggle-ended');
     }
-    return head + shown.map(dayHTML).join('');
+
+    // 把「连续 ≥2 个比赛日、这些天全是待定」的日期合成一个折叠块
+    var blocks = [];
+    var run = [];
+    function flushRun() {
+      if (!run.length) return;
+      blocks.push(run.length > 1 ? { pending: run } : { days: run });
+      run = [];
+    }
+    shown.forEach(function (d) {
+      var allTbd = d.events.every(isTbdEvent);
+      var notEnded = d.events.every(function (e) { return e.status !== 'ended'; });
+      // 日期必须连续：11/08 之后空一周再接 11/14 总决赛，不能并成一块
+      var contiguous = !run.length ||
+        (+new Date(d.date) - +new Date(run[run.length - 1].date)) === 86400000;
+      if (allTbd && notEnded && contiguous) {
+        run.push(d);
+      } else {
+        flushRun();
+        if (allTbd && notEnded) run.push(d);
+        else blocks.push({ days: [d] });
+      }
+    });
+    flushRun();
+
+    var body = blocks.map(function (b) {
+      return b.pending ? pendingHTML(b.pending) : b.days.map(dayHTML).join('');
+    }).join('');
+    return head + body;
   }
 
   function mineEvents(evs) {
