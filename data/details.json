@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-24T22:39:40+08:00",
+ "updatedAt": "2026-10-27T12:10:03+08:00",
  "source": "王者荣耀赛事数据平台（官方）",
  "matches": {
   "2026-10-18|KSG|上海EDG.M": {
@@ -5595,13 +5595,13 @@
       },
       {
        "camp": 1,
-       "hero": "马超",
-       "icon": "https://res.edata.qq.com/sgame/static/images/hero/518.jpg"
+       "hero": "杨戬",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/178.jpg"
       },
       {
        "camp": 1,
-       "hero": "杨戬",
-       "icon": "https://res.edata.qq.com/sgame/static/images/hero/178.jpg"
+       "hero": "马超",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/518.jpg"
       },
       {
        "camp": 2,
@@ -18891,13 +18891,13 @@
       },
       {
        "camp": 2,
-       "hero": "元流之子(辅助)",
-       "icon": "https://res.edata.qq.com/sgame/static/images/hero/585.jpg"
+       "hero": "狄仁杰",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/133.jpg"
       },
       {
        "camp": 2,
-       "hero": "狄仁杰",
-       "icon": "https://res.edata.qq.com/sgame/static/images/hero/133.jpg"
+       "hero": "元流之子(辅助)",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/585.jpg"
       },
       {
        "camp": 1,
