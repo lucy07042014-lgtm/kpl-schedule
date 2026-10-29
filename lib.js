@@ -558,7 +558,7 @@
     var c = new Date(new Date(today + 'T00:00:00Z').getTime() - maxAge * 86400000);
     var cutoff = c.getUTCFullYear() + '-' + pad(c.getUTCMonth() + 1) + '-' + pad(c.getUTCDate());
 
-    var liveToday = [], freshToday = [], past = [];
+    var liveToday = [], freshToday = [], missing = [], past = [];
     (events || []).forEach(function (ev) {
       if (!ev || !ev.date) return;
       var k = matchKey(ev.date, ev.home, ev.away);
@@ -568,6 +568,14 @@
         var hit = { key: k, matchId: d.matchId, date: ev.date, stale: ev.date !== today, discover: false };
         if (ev.date === today) liveToday.push(hit);
         else if (ev.date >= cutoff && ev.date < today) past.push(hit);
+        return;
+      }
+
+      // 往日已经打完、但内置快照里没有这场（比如那天没跑抓取脚本）：
+      // 官方 match_id 是现成的，直接补抓，列表上就能显示比分，不用手动点开详情
+      if (!d && ev.date < today && ev.date >= cutoff && ev.matchId && ev.endAt &&
+          new Date(ev.endAt).getTime() <= now) {
+        missing.push({ key: k, matchId: ev.matchId, date: ev.date, stale: false, discover: false });
         return;
       }
 
@@ -587,8 +595,9 @@
       }
     });
 
+    missing.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
     past.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
-    var all = liveToday.concat(freshToday, past);
+    var all = liveToday.concat(freshToday, missing, past);
     return limit == null ? all : all.slice(0, limit);
   }
 
