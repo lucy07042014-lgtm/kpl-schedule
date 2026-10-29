@@ -901,15 +901,24 @@ body.lock { overflow: hidden; }
 .lu-team { display: flex; align-items: center; gap: 6px; margin-bottom: 7px; font-size: 12px; }
 .lu-team em { font-style: normal; font-weight: 700; }
 .lu-players { display: flex; gap: 6px; }
-.lu-p {
+.stp {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 1px;
+  text-align: center;
 }
-.lu-p em {
+.stp b {
+  font-size: 12px;
+  font-weight: 700;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.stp i {
   font-style: normal;
   font-size: 9.5px;
   color: var(--muted);
