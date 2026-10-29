@@ -508,8 +508,32 @@
       if (b.is_ban_or_pick === 0) bans.push(rec); else picks.push(rec);
     });
 
+    /*
+     * BO7 打成 3:3 后的第 7 局是「巅峰对决」：英雄池重置、双方盲选、没有禁用。
+     * 盲选允许两队选同一个英雄，官方 bp_list 会把重复项合并（7 局只给 7 条），
+     * 所以这种局改用选手数据补出完整的 10 个选用，并把 peak 标出来给界面用。
+     */
+    var seq = d.battle_seq || 0;
+    var peak = seq === 7 && !bans.length && picks.length < 10 && players.length === 10;
+    if (peak) {
+      var byCamp = {};
+      players.forEach(function (p) { (byCamp[p.camp] = byCamp[p.camp] || []).push(p); });
+      var merged = [];
+      [1, 2].forEach(function (c) {
+        (byCamp[c] || []).forEach(function (p) {
+          merged.push({ camp: c, hero: p.hero, icon: p.heroIcon });
+        });
+      });
+      if (merged.length === 10 && merged.filter(function (x) { return x.camp === 1; }).length === 5) {
+        picks = merged;
+      } else {
+        peak = false;
+      }
+    }
+
     return {
-      seq: d.battle_seq || 0,
+      seq: seq,
+      peak: peak,
       winCamp: winCamp,
       winner: winner,
       duration: Math.round((d.game_duration || 0) / 1000),
