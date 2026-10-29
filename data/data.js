@@ -1,7 +1,7 @@
 /* 自动生成，请勿手改 —— 运行 `python tools/update.py` 更新 */
 window.KPL_DATA = {
   "season": "2026 KPL 年度总决赛",
-  "updatedAt": "2026-10-27T12:09:20+08:00",
+  "updatedAt": "2026-10-29T17:11:18+08:00",
   "source": "官方赛事数据平台 · 2026年KPL年度总决赛 + 社区 ics（api）",
   "events": [
     {
@@ -691,9 +691,9 @@ window.KPL_DATA = {
       "date": "2026-10-27",
       "weekday": 2,
       "start": "18:00",
-      "end": "20:00",
+      "end": "21:12",
       "startAt": "2026-10-27T18:00:00+08:00",
-      "endAt": "2026-10-27T20:00:00+08:00",
+      "endAt": "2026-10-27T21:12:33+08:00",
       "home": "北京JDG",
       "away": "广州TTG",
       "stage": "淘汰赛",
@@ -708,9 +708,9 @@ window.KPL_DATA = {
       "date": "2026-10-28",
       "weekday": 3,
       "start": "18:00",
-      "end": "20:00",
+      "end": "22:12",
       "startAt": "2026-10-28T18:00:00+08:00",
-      "endAt": "2026-10-28T20:00:00+08:00",
+      "endAt": "2026-10-28T22:12:27+08:00",
       "home": "重庆狼队",
       "away": "长沙TES.A",
       "stage": "淘汰赛",
@@ -762,11 +762,11 @@ window.KPL_DATA = {
       "end": "20:00",
       "startAt": "2026-10-31T18:00:00+08:00",
       "endAt": "2026-10-31T20:00:00+08:00",
-      "home": "待定",
-      "away": "待定",
+      "home": "广州TTG",
+      "away": "长沙TES.A",
       "stage": "淘汰赛",
       "bo": "BO7",
-      "tbd": true,
+      "tbd": false,
       "source": "official"
     },
     {
@@ -796,11 +796,11 @@ window.KPL_DATA = {
       "end": "20:00",
       "startAt": "2026-11-02T18:00:00+08:00",
       "endAt": "2026-11-02T20:00:00+08:00",
-      "home": "待定",
-      "away": "待定",
+      "home": "北京JDG",
+      "away": "重庆狼队",
       "stage": "淘汰赛",
       "bo": "BO7",
-      "tbd": true,
+      "tbd": false,
       "source": "official"
     },
     {
