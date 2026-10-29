@@ -906,6 +906,18 @@ body.lock { overflow: hidden; }
 .game-head b { font-size: 14px; font-weight: 800; }
 .game-head span { font-size: 11px; color: var(--muted); }
 .game-head em { margin-left: auto; font-style: normal; font-size: 11.5px; font-weight: 700; color: var(--gold); }
+/* BO7 3:3 后的第 7 局：巅峰对决（盲选、无禁用） */
+.peak-tag {
+  font-style: normal;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  padding: 1px 6px;
+  border-radius: 5px;
+  color: var(--on-gold);
+  background: var(--gold);
+  align-self: center;
+}
 
 .mvp-card {
   display: flex;
