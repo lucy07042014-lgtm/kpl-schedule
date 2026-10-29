@@ -1,5 +1,5 @@
 window.KPL_LINEUPS = {
-  "updatedAt": "2026-10-29T19:46:44+08:00",
+  "updatedAt": "2026-10-29T20:09:50+08:00",
   "source": "KPL 官微 / 虎扑流言板（OCR）",
   "matches": {
     "2026-10-29|KSG|北京WB": {
@@ -13,26 +13,31 @@ window.KPL_LINEUPS = {
             {
               "id": "无言",
               "real": "赵昊宇",
+              "ocr": "赵昊宇",
               "match": 0.5
             },
             {
               "id": "句号",
               "real": "何伟嘉",
+              "ocr": "何伟嘉",
               "match": 0.5
             },
             {
               "id": "流浪",
               "real": "张恒",
+              "ocr": "张恒",
               "match": 0.5
             },
             {
               "id": "梦岚",
               "real": "彭俊岚",
+              "ocr": "彭俊岚",
               "match": 0.5
             },
             {
               "id": "晚星",
-              "real": "王恒",
+              "real": "王恒鸿",
+              "ocr": "王恒",
               "match": 0.5
             }
           ]
@@ -42,27 +47,32 @@ window.KPL_LINEUPS = {
           "players": [
             {
               "id": "梓墨",
-              "real": "吴吉吉杰",
+              "real": "吴喆杰",
+              "ocr": "吴吉吉杰",
               "match": 0.5
             },
             {
               "id": "暖阳",
-              "real": "前恒",
+              "real": "林恒",
+              "ocr": "前恒",
               "match": 0.5
             },
             {
               "id": "听悦",
               "real": "吴佐",
+              "ocr": "吴佐",
               "match": 0.5
             },
             {
               "id": "昭珏",
-              "real": "屈两东",
+              "real": "屈万东",
+              "ocr": "屈两东",
               "match": 1.0
             },
             {
               "id": "一笙",
-              "real": "孪自",
+              "real": "李自威",
+              "ocr": "孪自",
               "match": 1.0
             }
           ]
