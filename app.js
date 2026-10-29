@@ -5,7 +5,7 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
-  var BUILD = '2026-10-29 17:16';   // 出问题时先看这个，能确定手机上跑的是哪一版
+  var BUILD = '2026-10-29 17:41';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
   var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2', hideEnded: 'kpl.hideEnded.v2' };
 
@@ -599,13 +599,15 @@
     return '<section class="game-card">' +
       '<div class="game-head">' +
         '<b>第 ' + g.seq + ' 局</b>' +
+        (g.peak ? '<i class="peak-tag">巅峰对决</i>' : '') +
         '<span>' + mfmt(g.duration) + '</span>' +
         '<em>' + esc(winName) + ' 胜</em>' +
       '</div>' +
       mvpHTML(g) +
       cmpHTML(g) +
       '<div class="sec-head"><h3>BP</h3>' +
-        (g.bans && g.bans.length ? '' : '<span class="hint">官方未公布本局禁用</span>') + '</div>' +
+        (g.peak ? '<span class="hint">盲选 · 无禁用</span>'
+                : (g.bans && g.bans.length ? '' : '<span class="hint">官方未公布本局禁用</span>')) + '</div>' +
       '<div class="bp">' + bpHTML(g, 1, '蓝') + bpHTML(g, 2, '红') + '</div>' +
       '<div class="sec-head"><h3>选手数据</h3><span class="hint">KDA / 经济</span></div>' +
       rosterHTML(g, 1) + rosterHTML(g, 2) +
