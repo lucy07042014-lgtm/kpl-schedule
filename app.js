@@ -5,7 +5,7 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
-  var BUILD = '2026-10-24 22:50';   // 出问题时先看这个，能确定手机上跑的是哪一版
+  var BUILD = '2026-10-29 16:55';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
   var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2', hideEnded: 'kpl.hideEnded.v2' };
 
@@ -258,7 +258,7 @@
 
   function dayHTML(day) {
     var isToday = day.date === L.nowKey();
-    return '<section class="day">' +
+    return '<section class="day" id="day-' + day.date + '">' +
       '<div class="day-head">' +
         '<div class="day-date">' + L.dateLabel(day.date) + '<span>' + L.weekdayCN(day.date) + '</span></div>' +
         '<div class="day-right">' +
@@ -364,6 +364,26 @@
       return b.pending ? pendingHTML(b.pending) : b.days.map(dayHTML).join('');
     }).join('');
     return head + body;
+  }
+
+  /**
+   * 打开「隐藏已结束」时，把视线落到最近结束的那场比赛上。
+   * 不这么做的话，页面会停在列表最上面（赛季第一场），得往下翻好几天才看得到刚打完的。
+   */
+  function revealNewestEnded() {
+    var ev = L.newestEnded(state.evs);
+    if (!ev) return;
+    var day = document.getElementById('day-' + ev.date);
+    if (!day) return;                      // 「我的战队」里没这场时就不动
+    var cards = day.querySelectorAll ? day.querySelectorAll('.match') : [];
+    var node = cards.length ? cards[cards.length - 1] : day;
+    if (typeof node.scrollIntoView === 'function') {
+      node.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    if (node.classList) {
+      node.classList.add('just-revealed');
+      setTimeout(function () { node.classList.remove('just-revealed'); }, 2000);
+    }
   }
 
   function mineEvents(evs) {
@@ -1032,11 +1052,15 @@
         state.tab = 'all';
         render();
         break;
-      case 'toggle-ended':
+      case 'toggle-ended': {
+        var wasHidden = state.hideEnded;
         state.hideEnded = !state.hideEnded;
         saveJson(LS.hideEnded, state.hideEnded);
         render();
+        // 从「只看未打完」切到「显示已结束」：直接定位到最近结束的那场
+        if (wasHidden) revealNewestEnded();
         break;
+      }
       case 'follow': {
         var team = el.dataset.team;
         var i = state.followed.indexOf(team);
