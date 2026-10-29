@@ -5,7 +5,7 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
-  var BUILD = '2026-10-29 16:55';   // 出问题时先看这个，能确定手机上跑的是哪一版
+  var BUILD = '2026-10-29 17:00';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
   var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2', hideEnded: 'kpl.hideEnded.v2' };
 
@@ -35,6 +35,7 @@
     evs: [],
     tab: 'today',
     hideEnded: true,   // 「全部」默认只看还没打完的；boot 时会被本地记忆覆盖
+    anchorNext: false, // 下次渲染完是否要跳到「最近结束的一场」
     followed: [],
     busy: false,
     details: (window.KPL_DETAILS && window.KPL_DETAILS.matches) || {},
@@ -125,6 +126,11 @@
     $('#view').innerHTML = viewHTML(evs);
     renderDetail();
     tick();
+    // 打开「全部」且是显示已结束的状态：直接落到最近结束的那场，别停在赛季开头
+    if (state.anchorNext) {
+      state.anchorNext = false;
+      revealNewestEnded();
+    }
   }
 
   function renderTabs(evs) {
@@ -1043,22 +1049,27 @@
 
   function onAction(act, el) {
     switch (act) {
-      case 'tab':
+      case 'tab': {
         state.tab = el.dataset.tab;
+        // 「全部」+ 显示已结束 → 直接定位最近一场；其余情况照旧回到顶部
+        var anchor = state.tab === 'all' && !state.hideEnded;
+        state.anchorNext = anchor;
         render();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (!anchor) window.scrollTo({ top: 0, behavior: 'smooth' });
         break;
+      }
       case 'tab-all':
         state.tab = 'all';
+        state.anchorNext = !state.hideEnded;
         render();
+        if (!state.anchorNext) window.scrollTo({ top: 0, behavior: 'smooth' });
         break;
       case 'toggle-ended': {
         var wasHidden = state.hideEnded;
         state.hideEnded = !state.hideEnded;
         saveJson(LS.hideEnded, state.hideEnded);
+        state.anchorNext = wasHidden;   // 从「只看未打完」切到「显示已结束」时定位
         render();
-        // 从「只看未打完」切到「显示已结束」：直接定位到最近结束的那场
-        if (wasHidden) revealNewestEnded();
         break;
       }
       case 'follow': {
