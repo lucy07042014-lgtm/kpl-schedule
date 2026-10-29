@@ -5,7 +5,7 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
-  var BUILD = '2026-10-29 17:41';   // 出问题时先看这个，能确定手机上跑的是哪一版
+  var BUILD = '2026-10-29 19:50';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
   var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2', hideEnded: 'kpl.hideEnded.v2' };
 
@@ -40,6 +40,7 @@
     busy: false,
     details: (window.KPL_DETAILS && window.KPL_DETAILS.matches) || {},
     detailsUpdatedAt: (window.KPL_DETAILS && window.KPL_DETAILS.updatedAt) || '',
+    lineups: (window.KPL_LINEUPS && window.KPL_LINEUPS.matches) || {},
     route: 'list',
     detailKey: null,
     gameIdx: 0,
@@ -228,6 +229,18 @@
     return L.nextUpcoming(known) || L.nextUpcoming(evs);
   }
 
+  /** 首发五人（KPL 官微每天 10:00 发，tools/fetch_lineups.py 抓取） */
+  function startersHTML(ev) {
+    var lu = state.lineups[keyOf(ev)];
+    if (!lu || !lu.teams) return '';
+    return '<div class="starters">' + lu.teams.map(function (t) {
+      return '<div class="st-row">' +
+        '<b>' + esc(t.name) + '</b>' +
+        '<span>' + (t.players || []).map(function (p) { return esc(p.id); }).join(' · ') + '</span>' +
+      '</div>';
+    }).join('') + '</div>';
+  }
+
   function matchHTML(ev) {
     var d = detailFor(ev);
     var key = keyOf(ev);
@@ -257,6 +270,7 @@
           scoreHTML +
           (ev.tbd ? '<span>对阵待定</span>' : (ended || stale || (live && d) ? '' : '<span>' + esc(ev.end) + ' 结束</span>')) +
         '</div>' +
+        startersHTML(ev) +
       '</div>' +
       '<button class="cal-btn" data-act="ics-one" data-id="' + esc(ev.id) + '" aria-label="加入日历" title="加入日历">' + ICON.cal + '</button>' +
     '</article>';
