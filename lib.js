@@ -111,6 +111,16 @@
     return list.length ? list[0] : null;
   }
 
+  /** 最近结束的一场比赛（按开赛时间取最后一场）；还没打完任何比赛时返回 null */
+  function newestEnded(events, now) {
+    var list = withStatus(events, now).filter(function (ev) { return ev.status === 'ended'; });
+    var best = null;
+    list.forEach(function (ev) {
+      if (!best || new Date(ev.startAt) >= new Date(best.startAt)) best = ev;
+    });
+    return best;
+  }
+
   function allTeams(events) {
     var count = {}, order = [];
     events.forEach(function (ev) {
@@ -616,6 +626,7 @@
     fromNow: fromNow,
     countdown: countdown,
     withStatus: withStatus,
+    newestEnded: newestEnded,
     groupByDay: groupByDay,
     nextUpcoming: nextUpcoming,
     currentLive: currentLive,
