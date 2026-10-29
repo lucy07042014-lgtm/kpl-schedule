@@ -5,7 +5,7 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
-  var BUILD = '2026-10-29 17:00';   // 出问题时先看这个，能确定手机上跑的是哪一版
+  var BUILD = '2026-10-29 17:16';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
   var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2', hideEnded: 'kpl.hideEnded.v2' };
 
@@ -604,7 +604,8 @@
       '</div>' +
       mvpHTML(g) +
       cmpHTML(g) +
-      '<div class="sec-head"><h3>BP</h3></div>' +
+      '<div class="sec-head"><h3>BP</h3>' +
+        (g.bans && g.bans.length ? '' : '<span class="hint">官方未公布本局禁用</span>') + '</div>' +
       '<div class="bp">' + bpHTML(g, 1, '蓝') + bpHTML(g, 2, '红') + '</div>' +
       '<div class="sec-head"><h3>选手数据</h3><span class="hint">KDA / 经济</span></div>' +
       rosterHTML(g, 1) + rosterHTML(g, 2) +
@@ -810,11 +811,12 @@
    * 后台同步：按优先级处理几场
    *   1. 今天有快照、还在打的
    *   2. 今天还没拿到数据、但按时间已经开打的（需要先发现 match_id）
-   *   3. 往日快照还挂着 live 的（隔夜情况）
+   *   3. 最近几天已结束、但内置快照里没有的（补比分，省得列表只显示「已结束」）
+   *   4. 往日快照还挂着 live 的（隔夜情况）
    */
   async function autoUpdateLive() {
     if (state.detailBusy) return;
-    var list = L.refreshTargets(state.evs || [], state.details, L.nowKey(), 2, 3);
+    var list = L.refreshTargets(state.evs || [], state.details, L.nowKey(), 3, 3);
     for (var i = 0; i < list.length; i++) {
       if (state.detailBusy) break;
       await refreshMatch(list[i].key, true);
