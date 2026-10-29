@@ -5,7 +5,7 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
-  var BUILD = '2026-10-29 19:50';   // 出问题时先看这个，能确定手机上跑的是哪一版
+  var BUILD = '2026-10-29 20:48';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
   var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2', hideEnded: 'kpl.hideEnded.v2' };
 
@@ -515,26 +515,42 @@
     if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
   }
 
-  function lineupHTML(g, ev) {
-    if (!g) return '';
-    var teams = g.teams.slice().sort(function (a, b) {
-      var ai = a.name === (ev && ev.home) ? 0 : 1;
-      var bi = b.name === (ev && ev.home) ? 0 : 1;
-      return ai - bi;
+  // 战报弹窗顶部：首发名单（只列选手 ID + 实名，不显示英雄；也不跟局数切换）
+  function startersSectionHTML(ev, firstGame) {
+    var lu = state.lineups[keyOf(ev)];
+    var teams = [];
+    if (lu && lu.teams && lu.teams.length) {
+      teams = lu.teams.map(function (t) {
+        return {
+          name: t.name,
+          players: (t.players || []).map(function (p) { return { id: p.id, real: p.real || '' }; })
+        };
+      });
+    } else if (firstGame) {
+      (firstGame.teams || []).forEach(function (t) {
+        var ps = (firstGame.players || [])
+          .filter(function (p) { return p.camp === t.camp; })
+          .map(function (p) { return { id: L.stripTeam(p.name, p.team || t.name), real: '' }; });
+        if (ps.length) teams.push({ name: t.name, players: ps });
+      });
+    }
+    if (!teams.length) return '';
+    teams.sort(function (a, b) {
+      return (a.name === ev.home ? 0 : 1) - (b.name === ev.home ? 0 : 1);
     });
     var rows = teams.map(function (t) {
-      var ps = g.players.filter(function (p) { return p.camp === t.camp; });
       return '<div class="lu-row">' +
-        '<div class="lu-team"><span class="avatar avatar-sm" style="' + avatarStyle(t.name, 9) + '">' + esc(L.abbr(t.name)) + '</span>' +
-        '<em>' + esc(t.name) + '</em></div>' +
-        '<div class="lu-players">' + ps.map(function (p) {
-          return '<span class="lu-p">' + heroImg(p.heroIcon, p.hero) +
-            '<em>' + esc(L.stripTeam(p.name, p.team || t.name)) + '</em></span>';
+        '<div class="lu-team"><span class="avatar avatar-sm" style="' + avatarStyle(t.name, 9) + '">' +
+          esc(L.abbr(t.name)) + '</span><em>' + esc(t.name) + '</em></div>' +
+        '<div class="lu-players">' + t.players.map(function (p) {
+          return '<span class="stp"><b>' + esc(p.id) + '</b>' +
+            (p.real ? '<i>' + esc(p.real) + '</i>' : '') + '</span>';
         }).join('') + '</div>' +
       '</div>';
     }).join('');
     return '<section class="lineup">' +
-      '<div class="sec-head"><h3>首发阵容</h3><span class="hint">第 1 局</span></div>' + rows + '</section>';
+      '<div class="sec-head"><h3>首发名单</h3><span class="hint">' +
+        (lu ? '官方海报' : '第 1 局') + '</span></div>' + rows + '</section>';
   }
 
   function mvpHTML(g) {
@@ -664,6 +680,7 @@
         '<b>' + esc(ev.away) + '</b></div>' +
     '</section>';
 
+    var starters = startersSectionHTML(ev, games[0] || null);
     var body;
     if (!d || !games.length) {
       var fetching = !!state.syncing[key];
@@ -673,7 +690,7 @@
       var desc = schedulingLive
         ? '第一局结束后官方才会有数据。<br>页面会自动同步，也可以点下面重试。'
         : '开赛后会显示首发阵容与逐局战报。';
-      body = '<div class="empty" style="margin-top:16px">' +
+      body = starters + '<div class="empty" style="margin-top:16px">' +
         '<div class="icon">' + ICON.calX + '</div>' +
         '<h3>' + title + '</h3>' +
         '<p>' + desc + '</p>' +
@@ -687,8 +704,7 @@
       if (d.live) tabs += '<span class="gtab pending">进行中…</span>';
 
       body = '<div class="game-tabs">' + tabs + '</div>' +
-        lineupHTML(games[0], ev) +
-        gameHTML(cur);
+        starters + gameHTML(cur);
     }
 
     var foot = '<div class="detail-foot">' +
