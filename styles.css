@@ -462,6 +462,30 @@ details.day.pending .day-date { font-size: 13.5px; }
   font-size: 9px;
 }
 
+.starters {
+  margin-top: 7px;
+  display: grid;
+  gap: 3px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.starters .st-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.starters .st-row b {
+  flex: none;
+  min-width: 46px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--text-2);
+}
+.starters .st-row span {
+  letter-spacing: 0.2px;
+}
+
 .match-sub {
   display: flex;
   align-items: center;
