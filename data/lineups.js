@@ -1,5 +1,5 @@
 window.KPL_LINEUPS = {
-  "updatedAt": "2026-11-01T11:18:54+08:00",
+  "updatedAt": "2026-11-01T11:26:26+08:00",
   "source": "KPL 官微 / 虎扑流言板（OCR）",
   "matches": {
     "2026-10-29|KSG|北京WB": {
