@@ -5,7 +5,7 @@
   var L = window.KPLLib;
   var BASE = window.KPL_DATA || { season: 'KPL', stages: [], events: [] };
   var API = 'https://prod.comp.smoba.qq.com/leaguesite';
-  var BUILD = '2026-11-03 10:31';   // 出问题时先看这个，能确定手机上跑的是哪一版
+  var BUILD = '2026-11-03 16:10';   // 出问题时先看这个，能确定手机上跑的是哪一版
 
   var LS = { cache: 'kpl.cache.v2', follow: 'kpl.follow.v2', theme: 'kpl.theme.v2', hideEnded: 'kpl.hideEnded.v2' };
 
@@ -214,6 +214,19 @@
     return L.matchKey(ev.date, ev.home, ev.away);
   }
 
+  /**
+   * 取某场的首发名单。
+   * data/lineups.json 里旧的 key 是按主客顺序写的，而 matchKey 会先把队名排序，
+   * 主客顺序恰好和字典序相反的对局（如「北京WB vs 上海EDG.M」）就会查不到，
+   * 所以这里再按交换后的 key 兜一次。
+   */
+  function lineupFor(ev) {
+    var box = state.lineups || {};
+    var hit = box[keyOf(ev)];
+    if (hit) return hit;
+    return box[L.matchKey(ev.date, ev.away, ev.home)] || null;
+  }
+
   function detailFor(ev) {
     return state.details[keyOf(ev)] || null;
   }
@@ -231,7 +244,7 @@
 
   /** 首发五人（KPL 官微每天 10:00 发，tools/fetch_lineups.py 抓取） */
   function startersHTML(ev) {
-    var lu = state.lineups[keyOf(ev)];
+    var lu = lineupFor(ev);
     if (!lu || !lu.teams) return '';
     return '<div class="starters">' + lu.teams.map(function (t) {
       return '<div class="st-row">' +
@@ -517,7 +530,7 @@
 
   // 战报弹窗顶部：首发名单（只列选手 ID + 实名，不显示英雄；也不跟局数切换）
   function startersSectionHTML(ev, firstGame) {
-    var lu = state.lineups[keyOf(ev)];
+    var lu = lineupFor(ev);
     var teams = [];
     if (lu && lu.teams && lu.teams.length) {
       teams = lu.teams.map(function (t) {
@@ -768,7 +781,7 @@
     try {
       var matchId = (d && d.matchId) || state.detailIds[key] || ev.matchId || (await discoverMatchId(ev));
       if (!matchId) {
-        if (!silent) toast('官方还没有这场比赛的逐局数据');
+        if (!silent) toast(ev.status === 'upcoming' ? '比赛还没开始，开赛后才有逐局数据' : '官方还没有这场比赛的逐局数据');
         state.detailBusy = false;
         delete state.syncing[key];
         if (state.route === 'detail') renderDetail();
