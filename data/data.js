@@ -1,7 +1,7 @@
 /* 自动生成，请勿手改 —— 运行 `python tools/update.py` 更新 */
 window.KPL_DATA = {
   "season": "2026 KPL 年度总决赛",
-  "updatedAt": "2026-11-03T10:30:14+08:00",
+  "updatedAt": "2026-11-04T10:30:21+08:00",
   "source": "官方赛事数据平台 · 2026年KPL年度总决赛 + 社区 ics（api）",
   "events": [
     {
@@ -810,9 +810,9 @@ window.KPL_DATA = {
       "date": "2026-11-03",
       "weekday": 2,
       "start": "18:00",
-      "end": "20:00",
+      "end": "21:24",
       "startAt": "2026-11-03T18:00:00+08:00",
-      "endAt": "2026-11-03T20:00:00+08:00",
+      "endAt": "2026-11-03T21:24:04+08:00",
       "home": "北京WB",
       "away": "上海EDG.M",
       "stage": "淘汰赛",
@@ -848,10 +848,10 @@ window.KPL_DATA = {
       "startAt": "2026-11-05T18:00:00+08:00",
       "endAt": "2026-11-05T20:00:00+08:00",
       "home": "杭州LGD.NBW",
-      "away": "待定",
+      "away": "上海EDG.M",
       "stage": "淘汰赛",
       "bo": "BO7",
-      "tbd": true,
+      "tbd": false,
       "source": "official"
     },
     {
@@ -865,10 +865,10 @@ window.KPL_DATA = {
       "startAt": "2026-11-06T18:00:00+08:00",
       "endAt": "2026-11-06T20:00:00+08:00",
       "home": "北京JDG",
-      "away": "待定",
+      "away": "北京WB",
       "stage": "淘汰赛",
       "bo": "BO7",
-      "tbd": true,
+      "tbd": false,
       "source": "official"
     },
     {
