@@ -1,7 +1,7 @@
 /* 自动生成，请勿手改 —— 运行 `python tools/update.py` 更新 */
 window.KPL_DATA = {
   "season": "2026 KPL 年度总决赛",
-  "updatedAt": "2026-11-04T10:30:21+08:00",
+  "updatedAt": "2026-11-04T15:44:18+08:00",
   "source": "官方赛事数据平台 · 2026年KPL年度总决赛 + 社区 ics（api）",
   "events": [
     {
