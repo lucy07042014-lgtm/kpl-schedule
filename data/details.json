@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-14T12:30:22+08:00",
+ "updatedAt": "2026-11-15T12:31:26+08:00",
  "source": "王者荣耀赛事数据平台（官方）",
  "matches": {
   "2026-10-18|KSG|上海EDG.M": {
@@ -45934,6 +45934,2396 @@
    "home": "广州TTG",
    "away": "北京WB",
    "eventId": "2026-11-08T1800-api"
+  },
+  "2026-11-14|北京JDG|北京WB": {
+   "matchId": "2026111401",
+   "date": "2026-11-14",
+   "bo": "BO7",
+   "teams": [
+    "北京JDG",
+    "北京WB"
+   ],
+   "icons": {
+    "北京WB": "https://smhtv-pic.tga.qq.com/75b41b2357febfa17764f8bc1f423d2c.png",
+    "北京JDG": "https://smhtv-pic.tga.qq.com/bc18df69dd91643409c09a3503737cb3.png"
+   },
+   "score": {
+    "北京JDG": 3,
+    "北京WB": 4
+   },
+   "winner": "北京WB",
+   "finished": true,
+   "live": false,
+   "games": [
+    {
+     "seq": 1,
+     "peak": false,
+     "winCamp": 1,
+     "winner": "北京WB",
+     "duration": 785,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "北京WB",
+       "icon": "https://smhtv-pic.tga.qq.com/75b41b2357febfa17764f8bc1f423d2c.png",
+       "isWin": true,
+       "kills": 15,
+       "deaths": 2,
+       "assists": 46,
+       "gold": 45685,
+       "towers": 7,
+       "bigDragons": 1,
+       "darkTyrants": 1,
+       "tyrants": 1,
+       "kda": 30.5
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG",
+       "icon": "https://smhtv-pic.tga.qq.com/bc18df69dd91643409c09a3503737cb3.png",
+       "isWin": false,
+       "kills": 2,
+       "deaths": 15,
+       "assists": 7,
+       "gold": 34760,
+       "towers": 0,
+       "bigDragons": 0,
+       "darkTyrants": 0,
+       "tyrants": 1,
+       "kda": 0.6
+      }
+     ],
+     "players": [
+      {
+       "camp": 1,
+       "name": "北京WB.梓墨",
+       "team": "北京WB",
+       "hero": "夏洛特",
+       "heroId": 536,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg",
+       "kills": 2,
+       "deaths": 1,
+       "assists": 6,
+       "kda": 8,
+       "gold": 10106,
+       "damage": 323766,
+       "damageRate": 0.2214,
+       "partRate": 53.3,
+       "mvp": false,
+       "svp": false,
+       "score": 7.8,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.无畏",
+       "team": "北京JDG",
+       "hero": "钟馗",
+       "heroId": 175,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/175.jpg",
+       "kills": 2,
+       "deaths": 5,
+       "assists": 0,
+       "kda": 0.4,
+       "gold": 5842,
+       "damage": 48344,
+       "damageRate": 0.0508,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.6,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.清融",
+       "team": "北京JDG",
+       "hero": "小乔",
+       "heroId": 106,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/106.jpg",
+       "kills": 0,
+       "deaths": 1,
+       "assists": 2,
+       "kda": 2,
+       "gold": 6825,
+       "damage": 176019,
+       "damageRate": 0.1851,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 5.6,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.暖阳",
+       "team": "北京WB",
+       "hero": "猪八戒",
+       "heroId": 511,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/511.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 12,
+       "kda": 13,
+       "gold": 9031,
+       "damage": 282313,
+       "damageRate": 0.193,
+       "partRate": 86.7,
+       "mvp": false,
+       "svp": false,
+       "score": 7.9,
+       "spell": "惩击"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.昭珏",
+       "team": "北京WB",
+       "hero": "鲁班七号",
+       "heroId": 112,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/112.jpg",
+       "kills": 8,
+       "deaths": 0,
+       "assists": 5,
+       "kda": 13,
+       "gold": 11194,
+       "damage": 593704,
+       "damageRate": 0.406,
+       "partRate": 86.7,
+       "mvp": true,
+       "svp": false,
+       "score": 12.2,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.光明",
+       "team": "北京JDG",
+       "hero": "白起",
+       "heroId": 120,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/120.jpg",
+       "kills": 0,
+       "deaths": 3,
+       "assists": 1,
+       "kda": 0.3,
+       "gold": 6615,
+       "damage": 148610,
+       "damageRate": 0.1562,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 3.3,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.听悦",
+       "team": "北京WB",
+       "hero": "金蝉",
+       "heroId": 540,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/540.jpg",
+       "kills": 3,
+       "deaths": 0,
+       "assists": 12,
+       "kda": 15,
+       "gold": 8225,
+       "damage": 207053,
+       "damageRate": 0.1416,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 10.2,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.无双",
+       "team": "北京JDG",
+       "hero": "心魔六耳",
+       "heroId": 549,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/549.jpg",
+       "kills": 0,
+       "deaths": 5,
+       "assists": 2,
+       "kda": 0.4,
+       "gold": 7631,
+       "damage": 353786,
+       "damageRate": 0.3719,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.1,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.小寒",
+       "team": "北京JDG",
+       "hero": "敖隐",
+       "heroId": 519,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg",
+       "kills": 0,
+       "deaths": 1,
+       "assists": 2,
+       "kda": 2,
+       "gold": 7847,
+       "damage": 224418,
+       "damageRate": 0.2359,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.一笙",
+       "team": "北京WB",
+       "hero": "盾山",
+       "heroId": 509,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 11,
+       "kda": 12,
+       "gold": 7129,
+       "damage": 55650,
+       "damageRate": 0.0381,
+       "partRate": 80.0,
+       "mvp": false,
+       "svp": false,
+       "score": 8.1,
+       "spell": "闪现"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "苏烈",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/194.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "张飞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "关羽",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/140.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "马超",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/518.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "哪吒",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/180.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "曹操",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "赵云",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "武则天",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/136.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "镜",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/531.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "盾山",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "钟馗",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/175.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "小乔",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/106.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "鲁班七号",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/112.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "猪八戒",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/511.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "敖隐",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "白起",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/120.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "夏洛特",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "金蝉",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/540.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "心魔六耳",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/549.jpg"
+      }
+     ]
+    },
+    {
+     "seq": 2,
+     "peak": false,
+     "winCamp": 2,
+     "winner": "北京JDG",
+     "duration": 876,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "北京WB",
+       "icon": "https://smhtv-pic.tga.qq.com/75b41b2357febfa17764f8bc1f423d2c.png",
+       "isWin": false,
+       "kills": 4,
+       "deaths": 9,
+       "assists": 10,
+       "gold": 41867,
+       "towers": 0,
+       "bigDragons": 0,
+       "darkTyrants": 0,
+       "tyrants": 0,
+       "kda": 1.5556
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG",
+       "icon": "https://smhtv-pic.tga.qq.com/bc18df69dd91643409c09a3503737cb3.png",
+       "isWin": true,
+       "kills": 9,
+       "deaths": 4,
+       "assists": 25,
+       "gold": 51598,
+       "towers": 6,
+       "bigDragons": 1,
+       "darkTyrants": 1,
+       "tyrants": 2,
+       "kda": 8.5
+      }
+     ],
+     "players": [
+      {
+       "camp": 2,
+       "name": "北京JDG.光明",
+       "team": "北京JDG",
+       "hero": "狂铁",
+       "heroId": 503,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/503.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 6,
+       "kda": 7,
+       "gold": 10679,
+       "damage": 287154,
+       "damageRate": 0.1565,
+       "partRate": 77.8,
+       "mvp": true,
+       "svp": false,
+       "score": 9.7,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.一笙",
+       "team": "北京WB",
+       "hero": "苏烈",
+       "heroId": 194,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/194.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 2,
+       "kda": 1,
+       "gold": 6165,
+       "damage": 50608,
+       "damageRate": 0.0409,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.1,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.小寒",
+       "team": "北京JDG",
+       "hero": "苍",
+       "heroId": 177,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/177.jpg",
+       "kills": 3,
+       "deaths": 0,
+       "assists": 4,
+       "kda": 7,
+       "gold": 11318,
+       "damage": 484392,
+       "damageRate": 0.264,
+       "partRate": 77.8,
+       "mvp": false,
+       "svp": false,
+       "score": 8.6,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.无畏",
+       "team": "北京JDG",
+       "hero": "太乙真人",
+       "heroId": 186,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/186.jpg",
+       "kills": 1,
+       "deaths": 2,
+       "assists": 5,
+       "kda": 3,
+       "gold": 7661,
+       "damage": 40781,
+       "damageRate": 0.0222,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 5.8,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.昭珏",
+       "team": "北京WB",
+       "hero": "敖隐",
+       "heroId": 519,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg",
+       "kills": 2,
+       "deaths": 1,
+       "assists": 2,
+       "kda": 4,
+       "gold": 9404,
+       "damage": 324293,
+       "damageRate": 0.2623,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": true,
+       "score": 6.9,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.无双",
+       "team": "北京JDG",
+       "hero": "裴擒虎",
+       "heroId": 502,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/502.jpg",
+       "kills": 3,
+       "deaths": 1,
+       "assists": 5,
+       "kda": 8,
+       "gold": 13384,
+       "damage": 779785,
+       "damageRate": 0.4251,
+       "partRate": 88.9,
+       "mvp": false,
+       "svp": false,
+       "score": 8.7,
+       "spell": "惩击"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.梓墨",
+       "team": "北京WB",
+       "hero": "司空震",
+       "heroId": 537,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 2,
+       "kda": 1,
+       "gold": 9755,
+       "damage": 280995,
+       "damageRate": 0.2273,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 5.4,
+       "spell": "狂暴"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.听悦",
+       "team": "北京WB",
+       "hero": "王维",
+       "heroId": 138,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/138.jpg",
+       "kills": 2,
+       "deaths": 2,
+       "assists": 2,
+       "kda": 2,
+       "gold": 7197,
+       "damage": 183163,
+       "damageRate": 0.1482,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.9,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.清融",
+       "team": "北京JDG",
+       "hero": "安琪拉",
+       "heroId": 142,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/142.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 5,
+       "kda": 6,
+       "gold": 8556,
+       "damage": 242422,
+       "damageRate": 0.1321,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 7.4,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.暖阳",
+       "team": "北京WB",
+       "hero": "橘右京",
+       "heroId": 163,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/163.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 2,
+       "kda": 1,
+       "gold": 9346,
+       "damage": 397162,
+       "damageRate": 0.3213,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 5.1,
+       "spell": "惩击"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "盾山",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "张飞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "海月",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "沈梦溪",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "赵怀真",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/544.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "女娲",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/179.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "张良",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/156.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "戈娅",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/548.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "墨子",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/108.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "司空震",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "狂铁",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/503.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "裴擒虎",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/502.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "苏烈",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/194.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "橘右京",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/163.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "安琪拉",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/142.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "苍",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/177.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "王维",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/138.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "敖隐",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "太乙真人",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/186.jpg"
+      }
+     ]
+    },
+    {
+     "seq": 3,
+     "peak": false,
+     "winCamp": 1,
+     "winner": "北京WB",
+     "duration": 1008,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "北京WB",
+       "icon": "https://smhtv-pic.tga.qq.com/75b41b2357febfa17764f8bc1f423d2c.png",
+       "isWin": true,
+       "kills": 10,
+       "deaths": 4,
+       "assists": 18,
+       "gold": 57955,
+       "towers": 7,
+       "bigDragons": 1,
+       "darkTyrants": 2,
+       "tyrants": 0,
+       "kda": 7
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG",
+       "icon": "https://smhtv-pic.tga.qq.com/bc18df69dd91643409c09a3503737cb3.png",
+       "isWin": false,
+       "kills": 4,
+       "deaths": 10,
+       "assists": 10,
+       "gold": 49591,
+       "towers": 1,
+       "bigDragons": 0,
+       "darkTyrants": 0,
+       "tyrants": 2,
+       "kda": 1.4
+      }
+     ],
+     "players": [
+      {
+       "camp": 1,
+       "name": "北京WB.暖阳",
+       "team": "北京WB",
+       "hero": "赵云",
+       "heroId": 107,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg",
+       "kills": 4,
+       "deaths": 0,
+       "assists": 3,
+       "kda": 7,
+       "gold": 13747,
+       "damage": 696021,
+       "damageRate": 0.3398,
+       "partRate": 70.0,
+       "mvp": false,
+       "svp": false,
+       "score": 9.3,
+       "spell": "惩击"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.听悦",
+       "team": "北京WB",
+       "hero": "海月",
+       "heroId": 521,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 3,
+       "kda": 4,
+       "gold": 9486,
+       "damage": 236037,
+       "damageRate": 0.1152,
+       "partRate": 40.0,
+       "mvp": false,
+       "svp": false,
+       "score": 5.5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.昭珏",
+       "team": "北京WB",
+       "hero": "公孙离",
+       "heroId": 199,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/199.jpg",
+       "kills": 3,
+       "deaths": 1,
+       "assists": 3,
+       "kda": 6,
+       "gold": 14305,
+       "damage": 670132,
+       "damageRate": 0.3272,
+       "partRate": 60.0,
+       "mvp": true,
+       "svp": false,
+       "score": 9.7,
+       "spell": "狂暴"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.梓墨",
+       "team": "北京WB",
+       "hero": "影",
+       "heroId": 558,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/558.jpg",
+       "kills": 1,
+       "deaths": 2,
+       "assists": 4,
+       "kda": 2.5,
+       "gold": 11787,
+       "damage": 400521,
+       "damageRate": 0.1955,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.清融",
+       "team": "北京JDG",
+       "hero": "姜子牙",
+       "heroId": 148,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/148.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 1,
+       "kda": 0.5,
+       "gold": 7726,
+       "damage": 153669,
+       "damageRate": 0.1068,
+       "partRate": 25.0,
+       "mvp": false,
+       "svp": false,
+       "score": 3.3,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.无畏",
+       "team": "北京JDG",
+       "hero": "张飞",
+       "heroId": 171,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 4,
+       "kda": 2,
+       "gold": 7729,
+       "damage": 66583,
+       "damageRate": 0.0463,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.6,
+       "spell": "治疗术"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.光明",
+       "team": "北京JDG",
+       "hero": "夏洛特",
+       "heroId": 536,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg",
+       "kills": 1,
+       "deaths": 2,
+       "assists": 2,
+       "kda": 1.5,
+       "gold": 11229,
+       "damage": 356879,
+       "damageRate": 0.2481,
+       "partRate": 75.0,
+       "mvp": false,
+       "svp": false,
+       "score": 5.7,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.无双",
+       "team": "北京JDG",
+       "hero": "夏侯惇",
+       "heroId": 126,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/126.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 2,
+       "kda": 3,
+       "gold": 10461,
+       "damage": 361018,
+       "damageRate": 0.251,
+       "partRate": 75.0,
+       "mvp": false,
+       "svp": true,
+       "score": 6.1,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.小寒",
+       "team": "北京JDG",
+       "hero": "莱西奥",
+       "heroId": 545,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/545.jpg",
+       "kills": 2,
+       "deaths": 3,
+       "assists": 1,
+       "kda": 1,
+       "gold": 12446,
+       "damage": 500205,
+       "damageRate": 0.3478,
+       "partRate": 75.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.一笙",
+       "team": "北京WB",
+       "hero": "太乙真人",
+       "heroId": 186,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/186.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 5,
+       "kda": 6,
+       "gold": 8630,
+       "damage": 45569,
+       "damageRate": 0.0222,
+       "partRate": 60.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6.6,
+       "spell": "闪现"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "盾山",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "司空震",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "曹操",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "大司命",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/517.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "沈梦溪",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "关羽",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/140.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "西施",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/523.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "哪吒",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/180.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "武则天",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/136.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "海月",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "张飞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "夏洛特",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/536.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "太乙真人",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/186.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "公孙离",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/199.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "莱西奥",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/545.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "姜子牙",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/148.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "影",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/558.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "赵云",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "夏侯惇",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/126.jpg"
+      }
+     ]
+    },
+    {
+     "seq": 4,
+     "peak": false,
+     "winCamp": 1,
+     "winner": "北京JDG",
+     "duration": 838,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "北京JDG",
+       "icon": "https://smhtv-pic.tga.qq.com/bc18df69dd91643409c09a3503737cb3.png",
+       "isWin": true,
+       "kills": 11,
+       "deaths": 6,
+       "assists": 30,
+       "gold": 47271,
+       "towers": 7,
+       "bigDragons": 1,
+       "darkTyrants": 0,
+       "tyrants": 1,
+       "kda": 6.8333
+      },
+      {
+       "camp": 2,
+       "name": "北京WB",
+       "icon": "https://smhtv-pic.tga.qq.com/75b41b2357febfa17764f8bc1f423d2c.png",
+       "isWin": false,
+       "kills": 6,
+       "deaths": 11,
+       "assists": 11,
+       "gold": 42659,
+       "towers": 1,
+       "bigDragons": 0,
+       "darkTyrants": 1,
+       "tyrants": 1,
+       "kda": 1.5455
+      }
+     ],
+     "players": [
+      {
+       "camp": 2,
+       "name": "北京WB.暖阳",
+       "team": "北京WB",
+       "hero": "宫本武藏",
+       "heroId": 130,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/130.jpg",
+       "kills": 3,
+       "deaths": 2,
+       "assists": 2,
+       "kda": 2.5,
+       "gold": 10402,
+       "damage": 458913,
+       "damageRate": 0.3377,
+       "partRate": 83.3,
+       "mvp": false,
+       "svp": false,
+       "score": 7.4,
+       "spell": "惩击"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.清融",
+       "team": "北京JDG",
+       "hero": "沈梦溪",
+       "heroId": 312,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 8,
+       "kda": 9,
+       "gold": 8347,
+       "damage": 272196,
+       "damageRate": 0.178,
+       "partRate": 81.8,
+       "mvp": true,
+       "svp": false,
+       "score": 10,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.昭珏",
+       "team": "北京WB",
+       "hero": "苍",
+       "heroId": 177,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/177.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 3,
+       "kda": 4,
+       "gold": 9983,
+       "damage": 399523,
+       "damageRate": 0.294,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": true,
+       "score": 7.9,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.无双",
+       "team": "北京JDG",
+       "hero": "大司命",
+       "heroId": 517,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/517.jpg",
+       "kills": 5,
+       "deaths": 2,
+       "assists": 5,
+       "kda": 5,
+       "gold": 10964,
+       "damage": 515759,
+       "damageRate": 0.3374,
+       "partRate": 90.9,
+       "mvp": false,
+       "svp": false,
+       "score": 9.6,
+       "spell": "惩击"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.无畏",
+       "team": "北京JDG",
+       "hero": "少司缘",
+       "heroId": 577,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/577.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 10,
+       "kda": 5,
+       "gold": 7580,
+       "damage": 37685,
+       "damageRate": 0.0247,
+       "partRate": 90.9,
+       "mvp": false,
+       "svp": false,
+       "score": 7.9,
+       "spell": "净化"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.小寒",
+       "team": "北京JDG",
+       "hero": "孙权",
+       "heroId": 151,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/151.jpg",
+       "kills": 4,
+       "deaths": 2,
+       "assists": 4,
+       "kda": 4,
+       "gold": 11165,
+       "damage": 465736,
+       "damageRate": 0.3046,
+       "partRate": 72.7,
+       "mvp": false,
+       "svp": false,
+       "score": 8.2,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.一笙",
+       "team": "北京WB",
+       "hero": "项羽",
+       "heroId": 135,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/135.jpg",
+       "kills": 1,
+       "deaths": 3,
+       "assists": 4,
+       "kda": 1.7,
+       "gold": 6228,
+       "damage": 51288,
+       "damageRate": 0.0377,
+       "partRate": 83.3,
+       "mvp": false,
+       "svp": false,
+       "score": 5.2,
+       "spell": "雾行千山"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.听悦",
+       "team": "北京WB",
+       "hero": "小乔",
+       "heroId": 106,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/106.jpg",
+       "kills": 0,
+       "deaths": 2,
+       "assists": 2,
+       "kda": 1,
+       "gold": 6757,
+       "damage": 171745,
+       "damageRate": 0.1264,
+       "partRate": 33.3,
+       "mvp": false,
+       "svp": false,
+       "score": 4.1,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.光明",
+       "team": "北京JDG",
+       "hero": "老夫子",
+       "heroId": 139,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/139.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 3,
+       "kda": 4,
+       "gold": 9215,
+       "damage": 237408,
+       "damageRate": 0.1553,
+       "partRate": 36.4,
+       "mvp": false,
+       "svp": false,
+       "score": 8.4,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.梓墨",
+       "team": "北京WB",
+       "hero": "曹操",
+       "heroId": 128,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg",
+       "kills": 1,
+       "deaths": 3,
+       "assists": 0,
+       "kda": 0.3,
+       "gold": 9289,
+       "damage": 277347,
+       "damageRate": 0.2041,
+       "partRate": 16.7,
+       "mvp": false,
+       "svp": false,
+       "score": 4.9,
+       "spell": "闪现"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "钟馗",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/175.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "盾山",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "阿古朵",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/533.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "司空震",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "西施",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/523.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "百里守约",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/196.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "张良",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/156.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "影",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/558.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "墨子",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/108.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "大司命",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/517.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "项羽",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/135.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "苍",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/177.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "少司缘",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/577.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "沈梦溪",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "宫本武藏",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/130.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "曹操",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "老夫子",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/139.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "孙权",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/151.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "小乔",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/106.jpg"
+      }
+     ]
+    },
+    {
+     "seq": 5,
+     "peak": false,
+     "winCamp": 1,
+     "winner": "北京WB",
+     "duration": 869,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "北京WB",
+       "icon": "https://smhtv-pic.tga.qq.com/75b41b2357febfa17764f8bc1f423d2c.png",
+       "isWin": true,
+       "kills": 14,
+       "deaths": 6,
+       "assists": 44,
+       "gold": 48664,
+       "towers": 3,
+       "bigDragons": 1,
+       "darkTyrants": 1,
+       "tyrants": 0,
+       "kda": 9.6667
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG",
+       "icon": "https://smhtv-pic.tga.qq.com/bc18df69dd91643409c09a3503737cb3.png",
+       "isWin": false,
+       "kills": 6,
+       "deaths": 14,
+       "assists": 16,
+       "gold": 41603,
+       "towers": 2,
+       "bigDragons": 0,
+       "darkTyrants": 0,
+       "tyrants": 1,
+       "kda": 1.5714
+      }
+     ],
+     "players": [
+      {
+       "camp": 1,
+       "name": "北京WB.昭珏",
+       "team": "北京WB",
+       "hero": "戈娅",
+       "heroId": 548,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/548.jpg",
+       "kills": 1,
+       "deaths": 2,
+       "assists": 9,
+       "kda": 5,
+       "gold": 10952,
+       "damage": 567002,
+       "damageRate": 0.3449,
+       "partRate": 71.4,
+       "mvp": false,
+       "svp": false,
+       "score": 7.5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.无双",
+       "team": "北京JDG",
+       "hero": "哪吒",
+       "heroId": 180,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/180.jpg",
+       "kills": 1,
+       "deaths": 4,
+       "assists": 4,
+       "kda": 1.3,
+       "gold": 9173,
+       "damage": 372195,
+       "damageRate": 0.3028,
+       "partRate": 83.3,
+       "mvp": false,
+       "svp": false,
+       "score": 5.5,
+       "spell": "惩击"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.听悦",
+       "team": "北京WB",
+       "hero": "沈梦溪",
+       "heroId": 312,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg",
+       "kills": 6,
+       "deaths": 0,
+       "assists": 8,
+       "kda": 14,
+       "gold": 9792,
+       "damage": 278906,
+       "damageRate": 0.1697,
+       "partRate": 100.0,
+       "mvp": true,
+       "svp": false,
+       "score": 11.7,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.清融",
+       "team": "北京JDG",
+       "hero": "不知火舞",
+       "heroId": 157,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/157.jpg",
+       "kills": 2,
+       "deaths": 3,
+       "assists": 4,
+       "kda": 2,
+       "gold": 6659,
+       "damage": 153445,
+       "damageRate": 0.1248,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6.3,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.梓墨",
+       "team": "北京WB",
+       "hero": "马超",
+       "heroId": 518,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/518.jpg",
+       "kills": 3,
+       "deaths": 3,
+       "assists": 5,
+       "kda": 2.7,
+       "gold": 10531,
+       "damage": 359570,
+       "damageRate": 0.2187,
+       "partRate": 57.1,
+       "mvp": false,
+       "svp": false,
+       "score": 8.9,
+       "spell": "疾跑"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.暖阳",
+       "team": "北京WB",
+       "hero": "夏侯惇",
+       "heroId": 126,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/126.jpg",
+       "kills": 2,
+       "deaths": 1,
+       "assists": 10,
+       "kda": 12,
+       "gold": 9543,
+       "damage": 382424,
+       "damageRate": 0.2326,
+       "partRate": 85.7,
+       "mvp": false,
+       "svp": false,
+       "score": 8.7,
+       "spell": "惩击"
+      },
+      {
+       "camp": 1,
+       "name": "北京WB.一笙",
+       "team": "北京WB",
+       "hero": "张飞",
+       "heroId": 171,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg",
+       "kills": 2,
+       "deaths": 0,
+       "assists": 12,
+       "kda": 14,
+       "gold": 7846,
+       "damage": 56084,
+       "damageRate": 0.0341,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 10.2,
+       "spell": "雾行千山"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.无畏",
+       "team": "北京JDG",
+       "hero": "赵怀真",
+       "heroId": 544,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/544.jpg",
+       "kills": 1,
+       "deaths": 3,
+       "assists": 2,
+       "kda": 1,
+       "gold": 6550,
+       "damage": 57177,
+       "damageRate": 0.0465,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.9,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.小寒",
+       "team": "北京JDG",
+       "hero": "卢雅那",
+       "heroId": 547,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/547.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 3,
+       "kda": 4,
+       "gold": 10342,
+       "damage": 356701,
+       "damageRate": 0.2902,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": true,
+       "score": 7,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京JDG.光明",
+       "team": "北京JDG",
+       "hero": "曹操",
+       "heroId": 128,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg",
+       "kills": 1,
+       "deaths": 3,
+       "assists": 3,
+       "kda": 1.3,
+       "gold": 8879,
+       "damage": 289769,
+       "damageRate": 0.2357,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 5.9,
+       "spell": "闪现"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "盾山",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/509.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "海月",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "关羽",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/140.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "裴擒虎",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/502.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "百里守约",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/196.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "老夫子",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/139.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "元流之子(射手)",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/584.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "芈月",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/121.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "空空儿",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/550.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "沈梦溪",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "不知火舞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/157.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "曹操",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/128.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "张飞",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/171.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "戈娅",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/548.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "哪吒",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/180.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "卢雅那",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/547.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "马超",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/518.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "夏侯惇",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/126.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "赵怀真",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/544.jpg"
+      }
+     ]
+    },
+    {
+     "seq": 6,
+     "peak": false,
+     "winCamp": 1,
+     "winner": "北京JDG",
+     "duration": 984,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "北京JDG",
+       "icon": "https://smhtv-pic.tga.qq.com/bc18df69dd91643409c09a3503737cb3.png",
+       "isWin": true,
+       "kills": 4,
+       "deaths": 3,
+       "assists": 11,
+       "gold": 53049,
+       "towers": 7,
+       "bigDragons": 2,
+       "darkTyrants": 1,
+       "tyrants": 2,
+       "kda": 5
+      },
+      {
+       "camp": 2,
+       "name": "北京WB",
+       "icon": "https://smhtv-pic.tga.qq.com/75b41b2357febfa17764f8bc1f423d2c.png",
+       "isWin": false,
+       "kills": 3,
+       "deaths": 4,
+       "assists": 9,
+       "gold": 47904,
+       "towers": 1,
+       "bigDragons": 0,
+       "darkTyrants": 1,
+       "tyrants": 0,
+       "kda": 3
+      }
+     ],
+     "players": [
+      {
+       "camp": 1,
+       "name": "北京JDG.无双",
+       "team": "北京JDG",
+       "hero": "赵云",
+       "heroId": 107,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg",
+       "kills": 2,
+       "deaths": 0,
+       "assists": 2,
+       "kda": 4,
+       "gold": 12492,
+       "damage": 751786,
+       "damageRate": 0.3613,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6.7,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.一笙",
+       "team": "北京WB",
+       "hero": "张良",
+       "heroId": 156,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/156.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 2,
+       "kda": 3,
+       "gold": 7020,
+       "damage": 108834,
+       "damageRate": 0.0514,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.昭珏",
+       "team": "北京WB",
+       "hero": "百里守约",
+       "heroId": 196,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/196.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 2,
+       "kda": 3,
+       "gold": 13457,
+       "damage": 854241,
+       "damageRate": 0.4033,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": true,
+       "score": 7.6,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.梓墨",
+       "team": "北京WB",
+       "hero": "蒙恬",
+       "heroId": 527,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/527.jpg",
+       "kills": 0,
+       "deaths": 3,
+       "assists": 1,
+       "kda": 0.3,
+       "gold": 8250,
+       "damage": 254464,
+       "damageRate": 0.1201,
+       "partRate": 33.3,
+       "mvp": false,
+       "svp": false,
+       "score": 5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.清融",
+       "team": "北京JDG",
+       "hero": "海诺",
+       "heroId": 563,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/563.jpg",
+       "kills": 2,
+       "deaths": 2,
+       "assists": 2,
+       "kda": 2,
+       "gold": 9938,
+       "damage": 317746,
+       "damageRate": 0.1527,
+       "partRate": 100.0,
+       "mvp": true,
+       "svp": false,
+       "score": 7.2,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.暖阳",
+       "team": "北京WB",
+       "hero": "韩信",
+       "heroId": 150,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/150.jpg",
+       "kills": 0,
+       "deaths": 1,
+       "assists": 2,
+       "kda": 2,
+       "gold": 11727,
+       "damage": 573504,
+       "damageRate": 0.2708,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 5.7,
+       "spell": "惩击"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.小寒",
+       "team": "北京JDG",
+       "hero": "元流之子(射手)",
+       "heroId": 584,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/584.jpg",
+       "kills": 0,
+       "deaths": 0,
+       "assists": 4,
+       "kda": 4,
+       "gold": 12173,
+       "damage": 693903,
+       "damageRate": 0.3334,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 7,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.光明",
+       "team": "北京JDG",
+       "hero": "关羽",
+       "heroId": 140,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/140.jpg",
+       "kills": 0,
+       "deaths": 0,
+       "assists": 0,
+       "kda": 0,
+       "gold": 10666,
+       "damage": 257488,
+       "damageRate": 0.1237,
+       "partRate": 0.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4,
+       "spell": "疾跑"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.听悦",
+       "team": "北京WB",
+       "hero": "武则天",
+       "heroId": 136,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/136.jpg",
+       "kills": 1,
+       "deaths": 0,
+       "assists": 2,
+       "kda": 3,
+       "gold": 7450,
+       "damage": 326938,
+       "damageRate": 0.1544,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.5,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.无畏",
+       "team": "北京JDG",
+       "hero": "空空儿",
+       "heroId": 550,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/550.jpg",
+       "kills": 0,
+       "deaths": 1,
+       "assists": 3,
+       "kda": 3,
+       "gold": 7780,
+       "damage": 60107,
+       "damageRate": 0.0289,
+       "partRate": 75.0,
+       "mvp": false,
+       "svp": false,
+       "score": 5.7,
+       "spell": "晕眩"
+      }
+     ],
+     "bans": [
+      {
+       "camp": 1,
+       "hero": "裴擒虎",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/502.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "元流之子(坦克)",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/581.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "海月",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/521.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "女娲",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/179.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "哪吒",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/180.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "西施",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/523.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "杨戬",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/178.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "戈娅",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/548.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "大司命",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/517.jpg"
+      }
+     ],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "关羽",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/140.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "张良",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/156.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "百里守约",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/196.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "赵云",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/107.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "空空儿",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/550.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "武则天",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/136.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "蒙恬",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/527.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "海诺",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/563.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "元流之子(射手)",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/584.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "韩信",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/150.jpg"
+      }
+     ]
+    },
+    {
+     "seq": 7,
+     "peak": true,
+     "winCamp": 2,
+     "winner": "北京WB",
+     "duration": 1123,
+     "teams": [
+      {
+       "camp": 1,
+       "name": "北京JDG",
+       "icon": "https://smhtv-pic.tga.qq.com/bc18df69dd91643409c09a3503737cb3.png",
+       "isWin": false,
+       "kills": 2,
+       "deaths": 12,
+       "assists": 5,
+       "gold": 49666,
+       "towers": 1,
+       "bigDragons": 0,
+       "darkTyrants": 0,
+       "tyrants": 0,
+       "kda": 0.5833
+      },
+      {
+       "camp": 2,
+       "name": "北京WB",
+       "icon": "https://smhtv-pic.tga.qq.com/75b41b2357febfa17764f8bc1f423d2c.png",
+       "isWin": true,
+       "kills": 12,
+       "deaths": 2,
+       "assists": 37,
+       "gold": 61305,
+       "towers": 6,
+       "bigDragons": 2,
+       "darkTyrants": 2,
+       "tyrants": 2,
+       "kda": 24.5
+      }
+     ],
+     "players": [
+      {
+       "camp": 1,
+       "name": "北京JDG.清融",
+       "team": "北京JDG",
+       "hero": "沈梦溪",
+       "heroId": 312,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg",
+       "kills": 0,
+       "deaths": 1,
+       "assists": 1,
+       "kda": 1,
+       "gold": 9337,
+       "damage": 375579,
+       "damageRate": 0.2484,
+       "partRate": 50.0,
+       "mvp": false,
+       "svp": false,
+       "score": 7.1,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.暖阳",
+       "team": "北京WB",
+       "hero": "元流之子(坦克)",
+       "heroId": 581,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/581.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 7,
+       "kda": 8,
+       "gold": 11556,
+       "damage": 463504,
+       "damageRate": 0.1857,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 8.3,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.听悦",
+       "team": "北京WB",
+       "hero": "沈梦溪",
+       "heroId": 312,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg",
+       "kills": 4,
+       "deaths": 0,
+       "assists": 7,
+       "kda": 11,
+       "gold": 11229,
+       "damage": 383332,
+       "damageRate": 0.1536,
+       "partRate": 91.7,
+       "mvp": true,
+       "svp": false,
+       "score": 11.7,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.昭珏",
+       "team": "北京WB",
+       "hero": "敖隐",
+       "heroId": 519,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg",
+       "kills": 3,
+       "deaths": 0,
+       "assists": 5,
+       "kda": 8,
+       "gold": 13926,
+       "damage": 848235,
+       "damageRate": 0.3399,
+       "partRate": 66.7,
+       "mvp": false,
+       "svp": false,
+       "score": 9,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.光明",
+       "team": "北京JDG",
+       "hero": "司空震",
+       "heroId": 537,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg",
+       "kills": 1,
+       "deaths": 3,
+       "assists": 1,
+       "kda": 0.7,
+       "gold": 11499,
+       "damage": 343283,
+       "damageRate": 0.227,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 5,
+       "spell": "狂暴"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.无畏",
+       "team": "北京JDG",
+       "hero": "鲁班大师",
+       "heroId": 525,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg",
+       "kills": 0,
+       "deaths": 4,
+       "assists": 2,
+       "kda": 0.5,
+       "gold": 7393,
+       "damage": 36276,
+       "damageRate": 0.024,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.2,
+       "spell": "闪现"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.一笙",
+       "team": "北京WB",
+       "hero": "鲁班大师",
+       "heroId": 525,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg",
+       "kills": 3,
+       "deaths": 0,
+       "assists": 9,
+       "kda": 12,
+       "gold": 9979,
+       "damage": 83576,
+       "damageRate": 0.0335,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 9.9,
+       "spell": "闪现"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.无双",
+       "team": "北京JDG",
+       "hero": "元流之子(坦克)",
+       "heroId": 581,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/581.jpg",
+       "kills": 1,
+       "deaths": 3,
+       "assists": 1,
+       "kda": 0.7,
+       "gold": 9848,
+       "damage": 345987,
+       "damageRate": 0.2288,
+       "partRate": 100.0,
+       "mvp": false,
+       "svp": false,
+       "score": 6.5,
+       "spell": "惩击"
+      },
+      {
+       "camp": 2,
+       "name": "北京WB.梓墨",
+       "team": "北京WB",
+       "hero": "司空震",
+       "heroId": 537,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg",
+       "kills": 1,
+       "deaths": 1,
+       "assists": 9,
+       "kda": 10,
+       "gold": 14615,
+       "damage": 717118,
+       "damageRate": 0.2873,
+       "partRate": 83.3,
+       "mvp": false,
+       "svp": false,
+       "score": 8,
+       "spell": "狂暴"
+      },
+      {
+       "camp": 1,
+       "name": "北京JDG.小寒",
+       "team": "北京JDG",
+       "hero": "敖隐",
+       "heroId": 519,
+       "heroIcon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg",
+       "kills": 0,
+       "deaths": 1,
+       "assists": 0,
+       "kda": 0,
+       "gold": 11589,
+       "damage": 411146,
+       "damageRate": 0.2719,
+       "partRate": 0.0,
+       "mvp": false,
+       "svp": false,
+       "score": 4.9,
+       "spell": "闪现"
+      }
+     ],
+     "bans": [],
+     "picks": [
+      {
+       "camp": 1,
+       "hero": "沈梦溪",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "司空震",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "元流之子(坦克)",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/581.jpg"
+      },
+      {
+       "camp": 1,
+       "hero": "敖隐",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "元流之子(坦克)",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/581.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "沈梦溪",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/312.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "敖隐",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/519.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "鲁班大师",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/525.jpg"
+      },
+      {
+       "camp": 2,
+       "hero": "司空震",
+       "icon": "https://res.edata.qq.com/sgame/static/images/hero/537.jpg"
+      }
+     ]
+    }
+   ],
+   "key": "2026-11-14|北京JDG|北京WB",
+   "home": "北京JDG",
+   "away": "北京WB",
+   "eventId": "2026-11-14T1730-api"
   }
  }
 }
